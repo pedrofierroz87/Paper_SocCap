@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SocCapUS</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Quarto_SocCap_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Quarto_SocCap_files/libs/quarto-html/quarto.js"></script>
+<script src="Quarto_SocCap_files/libs/quarto-html/popper.min.js"></script>
+<script src="Quarto_SocCap_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Quarto_SocCap_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Quarto_SocCap_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Quarto_SocCap_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Quarto_SocCap_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Quarto_SocCap_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Quarto_SocCap_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">SocCapUS</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="social-capital-territorial-inequalities-and-the-rise-of-anti-establishment-narratives" class="level1">
+<h1>Social Capital, Territorial Inequalities, and the Rise of Anti-Establishment Narratives</h1>
+<p>Pedro Fierro, Francisco Rowe and Andrés Rodríguez-Pose</p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>Historically, social capital has been perceived as a driver of voting behaviours, mainly through its influence on civic participation and trust. While it has traditionally been viewed as a counterforce against populist movements, recent studies have pointed out its dual nature, suggesting that in certain contexts, high levels of social capital could potentially fuel anti-establishment sentiments. Yet, social capital is multifaceted, reflecting diverse elements of social interaction. This study seeks to elucidate the nuanced roles various forms of social capital play in either strengthening or weakening support for anti-establishment narratives in specific territories.</p>
+<p>Utilising data from META and drawing upon the recent methodologies proposed by Chetty et al.&nbsp;(2022a, 2022b), this paper employs three distinct indicators to measure social capital:</p>
+<ol type="a">
+<li>Social connectedness: interaction among different “types” of people.</li>
+<li>Social cohesion: defined as clusters of friendships and</li>
+<li>Civic engagement: represented by volunteering rates.</li>
+</ol>
+<p>Informed by past research, we hypothesise that the rise of anti-establishment narratives can be traced back to long-term economic and demographic downturns in areas characterised by stronger social capital. However, it is postulated that the significance and magnitude of the influence of social capital on anti-establishment narratives may vary depending on the specific dimension of social capital under consideration.</p>
+<p>This research delves into the complex interplay between social capital, territorial disparities, and political unrest. With a refined approach to measurement, we aim to unveil the multifaceted influence of social capital on political dynamics in distinct territories.</p>
+</section>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">MOTIVATION</h2>
+<p>Previous research has proposed that social capital could be a factor affecting the endorsement of anti-establishment narratives. Specifically, concerning the United States, evidence indicates that counties with higher levels of social capital were more inclined to endorse Donald Trump in both the 2016 and 2020 elections, especially when taking into account recent economic decline.</p>
+<p><strong>Figure 1</strong> US Presidential Elections 2016 and 2020 (county level)</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-3-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>Figure 2</strong> Histograms of US Presidential Elections 2016 and 2020 (county level)</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(density)` instead.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Nonetheless, it’s important to acknowledge that social capital is not a one-dimensional concept. The tendency to view social capital as a single construct stems from practical limitations, particularly the scarcity of detailed data available at the county level. Recently, scholars have introduced a method for measuring distinct dimensions of social capital, including civic engagement, social cohesion, and economic connectedness.</p>
+<p><strong>Figure 3</strong> Civic Engagement Dimension</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>Figure 4</strong> Social Cohesion Dimension</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>Figure 5</strong> Economic Connectedness Dimension</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>As evident from the data, each dimension exhibits unique territorial patterns, which can potentially influence the inclination to endorse anti-establishment narratives in distinct ways. This is the aspect we aim to investigate further.</p>
+<p>It can be posited that dimensions linked to <strong>homogeneous</strong> networks may exhibit a positive correlation with anti-establishment perspectives. Conversely, dimensions associated with <strong>heterogeneous</strong> networks, signifying diversity, may demonstrate a negative relationship with support for anti-establishment sentiments.</p>
+<section id="first-part-replicating-classic-models" class="level3">
+<h3 class="anchored" data-anchor-id="first-part-replicating-classic-models">First Part: Replicating Classic Models</h3>
+<p><strong>Table 1</strong> Classic models for Trump Margin 2016 and 2020</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For 2016</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>model16_5 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> SC5_PCM_14 <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model16_5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    SC5_PCM_14 + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + 
+    SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.32491 -0.01969  0.00091  0.02048  0.16298 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        1.096e-01  1.696e-02   6.463 1.19e-10 ***
+INC_PC_16         -1.670e-06  8.244e-08 -20.253  &lt; 2e-16 ***
+GINI_16           -7.825e-02  2.298e-02  -3.405 0.000670 ***
+Employment_Change -3.328e-02  6.567e-03  -5.067 4.28e-07 ***
+SC5_PCM_14         9.228e-03  8.318e-04  11.094  &lt; 2e-16 ***
+POP_DEN_16        -1.081e-06  4.255e-07  -2.540 0.011144 *  
+UNE_16             1.550e-03  5.682e-04   2.727 0.006424 ** 
+EDU1_16            2.054e-03  1.543e-04  13.308  &lt; 2e-16 ***
+R_BLACK_16        -5.615e-04  7.541e-05  -7.446 1.25e-13 ***
+SEX_RATIO          4.481e-05  5.991e-05   0.748 0.454555    
+AGE_DEP_YOUNG     -9.858e-04  1.357e-04  -7.266 4.71e-13 ***
+MARRIED            5.833e-04  1.094e-04   5.330 1.05e-07 ***
+factor(S_ID)AR    -1.215e-02  6.016e-03  -2.019 0.043592 *  
+factor(S_ID)AZ    -1.107e-01  1.063e-02 -10.422  &lt; 2e-16 ***
+factor(S_ID)CA    -4.366e-02  6.800e-03  -6.421 1.57e-10 ***
+factor(S_ID)CO    -9.562e-03  6.760e-03  -1.414 0.157329    
+factor(S_ID)CT     3.606e-02  1.348e-02   2.676 0.007495 ** 
+factor(S_ID)DC     1.820e-02  3.597e-02   0.506 0.612966    
+factor(S_ID)DE     1.590e-02  2.085e-02   0.762 0.445862    
+factor(S_ID)FL    -4.916e-03  6.249e-03  -0.787 0.431485    
+factor(S_ID)GA    -1.238e-02  5.152e-03  -2.402 0.016354 *  
+factor(S_ID)HI     2.795e-02  2.097e-02   1.332 0.182809    
+factor(S_ID)IA     6.987e-02  6.199e-03  11.271  &lt; 2e-16 ***
+factor(S_ID)ID    -6.572e-02  7.304e-03  -8.997  &lt; 2e-16 ***
+factor(S_ID)IL     2.815e-02  5.942e-03   4.737 2.27e-06 ***
+factor(S_ID)IN     3.915e-02  6.048e-03   6.473 1.12e-10 ***
+factor(S_ID)KS    -1.990e-02  6.207e-03  -3.205 0.001363 ** 
+factor(S_ID)KY     1.647e-02  5.653e-03   2.914 0.003600 ** 
+factor(S_ID)LA     1.847e-03  6.218e-03   0.297 0.766414    
+factor(S_ID)MA    -1.929e-03  1.078e-02  -0.179 0.858046    
+factor(S_ID)MD     7.879e-03  8.567e-03   0.920 0.357790    
+factor(S_ID)ME     2.801e-02  1.010e-02   2.773 0.005585 ** 
+factor(S_ID)MI     3.098e-02  6.180e-03   5.013 5.67e-07 ***
+factor(S_ID)MN     4.195e-02  6.458e-03   6.497 9.57e-11 ***
+factor(S_ID)MO     4.302e-02  5.765e-03   7.462 1.11e-13 ***
+factor(S_ID)MS     3.313e-03  5.881e-03   0.563 0.573275    
+factor(S_ID)MT     1.469e-03  7.041e-03   0.209 0.834717    
+factor(S_ID)NC    -9.700e-03  5.618e-03  -1.727 0.084355 .  
+factor(S_ID)ND     5.187e-02  7.189e-03   7.215 6.82e-13 ***
+factor(S_ID)NE     2.276e-02  6.374e-03   3.570 0.000362 ***
+factor(S_ID)NH     9.257e-03  1.225e-02   0.756 0.449790    
+factor(S_ID)NJ     3.408e-02  9.134e-03   3.731 0.000194 ***
+factor(S_ID)NM    -3.618e-02  7.964e-03  -4.543 5.78e-06 ***
+factor(S_ID)NV     2.523e-03  9.903e-03   0.255 0.798930    
+factor(S_ID)NY     8.552e-02  6.670e-03  12.821  &lt; 2e-16 ***
+factor(S_ID)OH     6.133e-02  6.074e-03  10.097  &lt; 2e-16 ***
+factor(S_ID)OK    -5.960e-03  6.248e-03  -0.954 0.340215    
+factor(S_ID)OR    -3.824e-02  7.719e-03  -4.954 7.66e-07 ***
+factor(S_ID)PA     2.978e-02  6.469e-03   4.603 4.33e-06 ***
+factor(S_ID)RI     2.423e-02  1.656e-02   1.463 0.143563    
+factor(S_ID)SC    -5.147e-03  6.829e-03  -0.754 0.451084    
+factor(S_ID)SD     4.193e-02  6.864e-03   6.109 1.13e-09 ***
+factor(S_ID)TN     2.298e-02  5.828e-03   3.944 8.21e-05 ***
+factor(S_ID)TX    -2.818e-02  5.202e-03  -5.418 6.50e-08 ***
+factor(S_ID)UT    -1.800e-01  8.628e-03 -20.865  &lt; 2e-16 ***
+factor(S_ID)VA     1.274e-03  5.751e-03   0.221 0.824754    
+factor(S_ID)VT    -5.278e-03  1.066e-02  -0.495 0.620652    
+factor(S_ID)WA    -3.087e-02  7.494e-03  -4.120 3.90e-05 ***
+factor(S_ID)WI     3.397e-02  6.529e-03   5.203 2.09e-07 ***
+factor(S_ID)WV     3.677e-02  6.693e-03   5.494 4.27e-08 ***
+factor(S_ID)WY    -2.124e-02  9.194e-03  -2.310 0.020961 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.03527 on 3005 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.6248,    Adjusted R-squared:  0.6173 
+F-statistic: 83.41 on 60 and 3005 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For 2020</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>model20_5 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_20_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> SC5_PCM_14 <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model20_5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    SC5_PCM_14 + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + 
+    SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.201421 -0.024925  0.000082  0.025947  0.209825 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        7.402e-02  2.048e-02   3.614 0.000307 ***
+INC_PC_16         -2.189e-06  9.955e-08 -21.993  &lt; 2e-16 ***
+GINI_16           -6.533e-02  2.775e-02  -2.355 0.018604 *  
+Employment_Change -2.905e-02  7.930e-03  -3.664 0.000253 ***
+SC5_PCM_14         1.028e-02  1.004e-03  10.237  &lt; 2e-16 ***
+POP_DEN_16         3.660e-07  5.137e-07   0.712 0.476284    
+UNE_16             1.198e-03  6.861e-04   1.746 0.080955 .  
+EDU1_16            3.768e-03  1.864e-04  20.219  &lt; 2e-16 ***
+R_BLACK_16        -6.881e-04  9.106e-05  -7.557 5.43e-14 ***
+SEX_RATIO          1.433e-04  7.234e-05   1.981 0.047705 *  
+AGE_DEP_YOUNG     -8.363e-04  1.638e-04  -5.104 3.52e-07 ***
+MARRIED            8.904e-04  1.321e-04   6.739 1.90e-11 ***
+factor(S_ID)AR     1.505e-02  7.264e-03   2.072 0.038328 *  
+factor(S_ID)AZ    -3.448e-02  1.283e-02  -2.687 0.007244 ** 
+factor(S_ID)CA    -2.827e-02  8.211e-03  -3.443 0.000583 ***
+factor(S_ID)CO    -3.337e-03  8.163e-03  -0.409 0.682716    
+factor(S_ID)CT     3.819e-02  1.627e-02   2.347 0.018993 *  
+factor(S_ID)DC     5.264e-02  4.344e-02   1.212 0.225617    
+factor(S_ID)DE    -4.009e-03  2.518e-02  -0.159 0.873510    
+factor(S_ID)FL     5.722e-03  7.546e-03   0.758 0.448352    
+factor(S_ID)GA    -2.087e-02  6.222e-03  -3.354 0.000807 ***
+factor(S_ID)HI     8.376e-02  2.533e-02   3.307 0.000953 ***
+factor(S_ID)IA     1.066e-01  7.486e-03  14.246  &lt; 2e-16 ***
+factor(S_ID)ID    -8.339e-03  8.820e-03  -0.946 0.344466    
+factor(S_ID)IL     5.589e-02  7.175e-03   7.789 9.25e-15 ***
+factor(S_ID)IN     5.304e-02  7.304e-03   7.263 4.81e-13 ***
+factor(S_ID)KS    -1.732e-03  7.495e-03  -0.231 0.817253    
+factor(S_ID)KY     1.273e-02  6.826e-03   1.864 0.062360 .  
+factor(S_ID)LA     6.502e-03  7.508e-03   0.866 0.386529    
+factor(S_ID)MA     5.819e-03  1.302e-02   0.447 0.654902    
+factor(S_ID)MD     6.335e-04  1.034e-02   0.061 0.951170    
+factor(S_ID)ME     4.013e-02  1.220e-02   3.290 0.001014 ** 
+factor(S_ID)MI     4.558e-02  7.463e-03   6.108 1.14e-09 ***
+factor(S_ID)MN     6.981e-02  7.798e-03   8.953  &lt; 2e-16 ***
+factor(S_ID)MO     5.513e-02  6.962e-03   7.919 3.33e-15 ***
+factor(S_ID)MS    -4.864e-03  7.102e-03  -0.685 0.493443    
+factor(S_ID)MT     1.944e-02  8.502e-03   2.286 0.022304 *  
+factor(S_ID)NC    -2.081e-03  6.784e-03  -0.307 0.759062    
+factor(S_ID)ND     9.150e-02  8.681e-03  10.540  &lt; 2e-16 ***
+factor(S_ID)NE     4.376e-02  7.696e-03   5.686 1.42e-08 ***
+factor(S_ID)NH     1.773e-02  1.479e-02   1.199 0.230717    
+factor(S_ID)NJ     4.056e-02  1.103e-02   3.678 0.000240 ***
+factor(S_ID)NM     8.091e-03  9.617e-03   0.841 0.400229    
+factor(S_ID)NV     3.328e-02  1.196e-02   2.783 0.005413 ** 
+factor(S_ID)NY     9.174e-02  8.054e-03  11.390  &lt; 2e-16 ***
+factor(S_ID)OH     9.038e-02  7.335e-03  12.322  &lt; 2e-16 ***
+factor(S_ID)OK     1.184e-02  7.545e-03   1.570 0.116595    
+factor(S_ID)OR    -1.748e-02  9.320e-03  -1.876 0.060793 .  
+factor(S_ID)PA     3.691e-02  7.811e-03   4.725 2.41e-06 ***
+factor(S_ID)RI     2.739e-02  2.000e-02   1.369 0.170961    
+factor(S_ID)SC     2.293e-03  8.246e-03   0.278 0.780967    
+factor(S_ID)SD     5.711e-02  8.288e-03   6.891 6.70e-12 ***
+factor(S_ID)TN     3.268e-02  7.037e-03   4.644 3.56e-06 ***
+factor(S_ID)TX    -1.688e-02  6.281e-03  -2.688 0.007225 ** 
+factor(S_ID)UT    -7.032e-02  1.042e-02  -6.749 1.78e-11 ***
+factor(S_ID)VA     1.178e-02  6.944e-03   1.696 0.089986 .  
+factor(S_ID)VT     1.534e-02  1.288e-02   1.191 0.233573    
+factor(S_ID)WA    -2.346e-02  9.049e-03  -2.592 0.009584 ** 
+factor(S_ID)WI     6.169e-02  7.884e-03   7.824 7.00e-15 ***
+factor(S_ID)WV     3.863e-02  8.082e-03   4.780 1.84e-06 ***
+factor(S_ID)WY     1.345e-02  1.110e-02   1.212 0.225639    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.04259 on 3005 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.5739,    Adjusted R-squared:  0.5654 
+F-statistic: 67.45 on 60 and 3005 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+<section id="second-part-replicating-classic-models-with-meta-data" class="level3">
+<h3 class="anchored" data-anchor-id="second-part-replicating-classic-models-with-meta-data">Second Part: Replicating Classic Models with META Data</h3>
+<p><strong>Figure 6</strong> Correlation Matrix</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data_trump3 <span class="ot">&lt;-</span> <span class="fu">select</span>(data_trump2, MAR_T_new, INC_PC_16, GINI_16, Employment_Change, SC5_PCM_14, </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                     civic_organizations_county, volunteering_rate_county, clustering_county, </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                     support_ratio_county, ec_county, POP_DEN_16, UNE_16, EDU1_16, R_BLACK_16, </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                     SEX_RATIO, AGE_DEP_YOUNG, MARRIED)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>cormat <span class="ot">&lt;-</span> <span class="fu">cor</span>(data_trump3, <span class="at">use=</span><span class="st">"complete.obs"</span>, <span class="at">method=</span><span class="st">"pearson"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># significance test</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>sig1 <span class="ot">&lt;-</span> corrplot<span class="sc">::</span><span class="fu">cor.mtest</span>(data_trump3, <span class="at">conf.level =</span> .<span class="dv">95</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># creta a correlogram</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>corrplot<span class="sc">::</span><span class="fu">corrplot</span>(cormat, <span class="at">type=</span><span class="st">"lower"</span>,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>                   <span class="at">method =</span> <span class="st">"circle"</span>, </span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>                   <span class="at">order =</span> <span class="st">"original"</span>, </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>                   <span class="at">tl.cex =</span> <span class="fl">0.7</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>                   <span class="at">p.mat =</span> sig1<span class="sc">$</span>p, <span class="at">sig.level =</span> .<span class="dv">05</span>, </span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>                   <span class="at">col =</span> viridis<span class="sc">::</span><span class="fu">viridis</span>(<span class="dv">100</span>, <span class="at">option =</span> <span class="st">"plasma"</span>),</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>                   <span class="at">diag =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><strong>Figure 7</strong> Scatterplot for Trump Margin and Social Capital (classic and differentiating)</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `&lt;scale&gt;` argument of `guides()` cannot be `FALSE`. Use "none" instead as
+of ggplot2 3.3.4.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The following aesthetics were dropped during statistical transformation: size
+ℹ This can happen when ggplot fails to infer the correct grouping structure in
+  the data.
+ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+  variable into a factor?</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 1 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The following aesthetics were dropped during statistical transformation: size
+ℹ This can happen when ggplot fails to infer the correct grouping structure in
+  the data.
+ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+  variable into a factor?
+Removed 1 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-13-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The following aesthetics were dropped during statistical transformation: size
+ℹ This can happen when ggplot fails to infer the correct grouping structure in
+  the data.
+ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+  variable into a factor?
+Removed 1 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-13-3.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The following aesthetics were dropped during statistical transformation: size
+ℹ This can happen when ggplot fails to infer the correct grouping structure in
+  the data.
+ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+  variable into a factor?
+Removed 1 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-13-4.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The following aesthetics were dropped during statistical transformation: size
+ℹ This can happen when ggplot fails to infer the correct grouping structure in
+  the data.
+ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+  variable into a factor?
+Removed 1 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-13-5.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 66 rows containing non-finite values (`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The following aesthetics were dropped during statistical transformation: size
+ℹ This can happen when ggplot fails to infer the correct grouping structure in
+  the data.
+ℹ Did you forget to specify a `group` aesthetic or to convert a numerical
+  variable into a factor?</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 67 rows containing missing values (`geom_point()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Quarto_SocCap_files/figure-html/unnamed-chunk-13-6.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Note: All models consider population density (size of circles)</p>
+<p><strong>Table 2</strong> Basic model for Trump Margin 2016, with META data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Civic Engagement</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>modelnew16_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> civic_organizations_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew16_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + 
+    R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), 
+    data = data_trump2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.33498 -0.01945  0.00115  0.01982  0.17096 
+
+Coefficients:
+                             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                 3.103e-02  1.992e-02   1.558 0.119336    
+INC_PC_16                  -1.656e-06  8.592e-08 -19.274  &lt; 2e-16 ***
+GINI_16                    -2.643e-02  2.453e-02  -1.077 0.281430    
+Employment_Change          -3.140e-02  6.808e-03  -4.611 4.17e-06 ***
+civic_organizations_county  4.291e-01  8.051e-02   5.330 1.06e-07 ***
+POP_DEN_16                 -1.095e-06  4.274e-07  -2.563 0.010436 *  
+UNE_16                      1.371e-03  5.817e-04   2.357 0.018497 *  
+EDU1_16                     2.047e-03  1.620e-04  12.640  &lt; 2e-16 ***
+R_BLACK_16                 -3.030e-04  8.060e-05  -3.759 0.000174 ***
+SEX_RATIO                   5.552e-05  6.198e-05   0.896 0.370494    
+AGE_DEP_YOUNG              -1.107e-03  1.445e-04  -7.665 2.41e-14 ***
+MARRIED                     1.398e-03  1.621e-04   8.627  &lt; 2e-16 ***
+factor(S_ID)AR             -9.117e-03  6.019e-03  -1.515 0.129960    
+factor(S_ID)AZ             -1.104e-01  1.067e-02 -10.351  &lt; 2e-16 ***
+factor(S_ID)CA             -3.801e-02  6.867e-03  -5.536 3.37e-08 ***
+factor(S_ID)CO             -2.906e-03  6.792e-03  -0.428 0.668813    
+factor(S_ID)CT              4.078e-02  1.351e-02   3.017 0.002572 ** 
+factor(S_ID)DC              4.826e-02  3.596e-02   1.342 0.179701    
+factor(S_ID)DE              1.716e-02  2.087e-02   0.822 0.411043    
+factor(S_ID)FL             -1.937e-03  6.267e-03  -0.309 0.757214    
+factor(S_ID)GA             -1.169e-02  5.157e-03  -2.266 0.023496 *  
+factor(S_ID)HI              2.980e-02  2.101e-02   1.418 0.156248    
+factor(S_ID)IA              8.337e-02  6.120e-03  13.623  &lt; 2e-16 ***
+factor(S_ID)ID             -6.324e-02  7.379e-03  -8.570  &lt; 2e-16 ***
+factor(S_ID)IL              3.780e-02  5.925e-03   6.381 2.04e-10 ***
+factor(S_ID)IN              4.375e-02  6.084e-03   7.191 8.13e-13 ***
+factor(S_ID)KS             -6.730e-03  6.139e-03  -1.096 0.273009    
+factor(S_ID)KY              1.419e-02  5.659e-03   2.507 0.012233 *  
+factor(S_ID)LA              3.463e-03  6.229e-03   0.556 0.578301    
+factor(S_ID)MA              6.807e-03  1.085e-02   0.627 0.530512    
+factor(S_ID)MD              1.239e-02  8.593e-03   1.442 0.149303    
+factor(S_ID)ME              3.355e-02  1.013e-02   3.311 0.000940 ***
+factor(S_ID)MI              3.400e-02  6.206e-03   5.479 4.65e-08 ***
+factor(S_ID)MN              6.069e-02  6.281e-03   9.663  &lt; 2e-16 ***
+factor(S_ID)MO              4.853e-02  5.785e-03   8.389  &lt; 2e-16 ***
+factor(S_ID)MS              4.124e-03  5.903e-03   0.699 0.484828    
+factor(S_ID)MT              1.414e-02  7.079e-03   1.998 0.045834 *  
+factor(S_ID)NC             -9.220e-03  5.629e-03  -1.638 0.101546    
+factor(S_ID)ND              6.805e-02  7.152e-03   9.515  &lt; 2e-16 ***
+factor(S_ID)NE              3.159e-02  6.417e-03   4.923 8.98e-07 ***
+factor(S_ID)NH              1.787e-02  1.228e-02   1.456 0.145600    
+factor(S_ID)NJ              3.578e-02  9.157e-03   3.907 9.55e-05 ***
+factor(S_ID)NM             -2.935e-02  8.172e-03  -3.591 0.000335 ***
+factor(S_ID)NV              4.484e-03  1.017e-02   0.441 0.659230    
+factor(S_ID)NY              8.992e-02  6.734e-03  13.354  &lt; 2e-16 ***
+factor(S_ID)OH              6.883e-02  6.087e-03  11.307  &lt; 2e-16 ***
+factor(S_ID)OK             -6.778e-04  6.269e-03  -0.108 0.913915    
+factor(S_ID)OR             -2.600e-02  7.675e-03  -3.388 0.000713 ***
+factor(S_ID)PA              3.762e-02  6.491e-03   5.795 7.53e-09 ***
+factor(S_ID)RI              2.953e-02  1.660e-02   1.779 0.075324 .  
+factor(S_ID)SC             -2.624e-03  6.832e-03  -0.384 0.700973    
+factor(S_ID)SD              5.695e-02  6.791e-03   8.386  &lt; 2e-16 ***
+factor(S_ID)TN              1.972e-02  5.826e-03   3.385 0.000720 ***
+factor(S_ID)TX             -2.558e-02  5.244e-03  -4.878 1.13e-06 ***
+factor(S_ID)UT             -1.857e-01  8.693e-03 -21.367  &lt; 2e-16 ***
+factor(S_ID)VA              8.509e-03  5.970e-03   1.425 0.154143    
+factor(S_ID)VT              1.973e-03  1.071e-02   0.184 0.853906    
+factor(S_ID)WA             -2.177e-02  7.507e-03  -2.900 0.003763 ** 
+factor(S_ID)WI              4.490e-02  6.499e-03   6.909 5.97e-12 ***
+factor(S_ID)WV              3.795e-02  6.712e-03   5.655 1.71e-08 ***
+factor(S_ID)WY             -4.702e-04  9.042e-03  -0.052 0.958528    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.0353 on 2955 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.6252,    Adjusted R-squared:  0.6176 
+F-statistic: 82.14 on 60 and 2955 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>modelnew16_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> volunteering_rate_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew16_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + 
+    R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), 
+    data = data_trump2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.34676 -0.01944  0.00090  0.02012  0.16976 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)               2.578e-02  2.000e-02   1.289 0.197488    
+INC_PC_16                -1.650e-06  8.605e-08 -19.169  &lt; 2e-16 ***
+GINI_16                  -1.912e-02  2.447e-02  -0.781 0.434742    
+Employment_Change        -2.837e-02  6.790e-03  -4.179 3.02e-05 ***
+volunteering_rate_county  1.188e-01  2.413e-02   4.922 9.03e-07 ***
+POP_DEN_16               -1.186e-06  4.271e-07  -2.777 0.005523 ** 
+UNE_16                    1.308e-03  5.822e-04   2.246 0.024762 *  
+EDU1_16                   2.165e-03  1.647e-04  13.144  &lt; 2e-16 ***
+R_BLACK_16               -2.397e-04  8.158e-05  -2.939 0.003323 ** 
+SEX_RATIO                 4.325e-05  6.206e-05   0.697 0.485942    
+AGE_DEP_YOUNG            -1.234e-03  1.400e-04  -8.818  &lt; 2e-16 ***
+MARRIED                   1.505e-03  1.601e-04   9.401  &lt; 2e-16 ***
+factor(S_ID)AR           -1.155e-02  6.053e-03  -1.908 0.056527 .  
+factor(S_ID)AZ           -1.094e-01  1.067e-02 -10.252  &lt; 2e-16 ***
+factor(S_ID)CA           -3.827e-02  6.879e-03  -5.564 2.87e-08 ***
+factor(S_ID)CO            7.797e-04  6.737e-03   0.116 0.907865    
+factor(S_ID)CT            4.031e-02  1.352e-02   2.981 0.002898 ** 
+factor(S_ID)DC            5.315e-02  3.595e-02   1.479 0.139368    
+factor(S_ID)DE            1.740e-02  2.088e-02   0.833 0.404743    
+factor(S_ID)FL           -2.340e-03  6.271e-03  -0.373 0.709122    
+factor(S_ID)GA           -1.196e-02  5.163e-03  -2.317 0.020577 *  
+factor(S_ID)HI            2.833e-02  2.103e-02   1.347 0.178134    
+factor(S_ID)IA            8.282e-02  6.137e-03  13.495  &lt; 2e-16 ***
+factor(S_ID)ID           -6.448e-02  7.414e-03  -8.697  &lt; 2e-16 ***
+factor(S_ID)IL            3.526e-02  5.968e-03   5.908 3.85e-09 ***
+factor(S_ID)IN            4.058e-02  6.154e-03   6.595 5.01e-11 ***
+factor(S_ID)KS           -7.100e-03  6.168e-03  -1.151 0.249756    
+factor(S_ID)KY            1.279e-02  5.668e-03   2.256 0.024130 *  
+factor(S_ID)LA           -6.753e-05  6.263e-03  -0.011 0.991398    
+factor(S_ID)MA            7.041e-03  1.086e-02   0.648 0.516748    
+factor(S_ID)MD            1.233e-02  8.601e-03   1.433 0.151897    
+factor(S_ID)ME            3.391e-02  1.014e-02   3.345 0.000833 ***
+factor(S_ID)MI            2.857e-02  6.386e-03   4.473 8.00e-06 ***
+factor(S_ID)MN            6.215e-02  6.271e-03   9.910  &lt; 2e-16 ***
+factor(S_ID)MO            4.649e-02  5.841e-03   7.960 2.44e-15 ***
+factor(S_ID)MS            2.258e-03  5.915e-03   0.382 0.702746    
+factor(S_ID)MT            1.650e-02  7.041e-03   2.343 0.019175 *  
+factor(S_ID)NC           -8.148e-03  5.626e-03  -1.448 0.147631    
+factor(S_ID)ND            6.859e-02  7.152e-03   9.590  &lt; 2e-16 ***
+factor(S_ID)NE            3.198e-02  6.419e-03   4.982 6.65e-07 ***
+factor(S_ID)NH            1.929e-02  1.228e-02   1.571 0.116281    
+factor(S_ID)NJ            3.472e-02  9.166e-03   3.788 0.000155 ***
+factor(S_ID)NM           -2.582e-02  8.140e-03  -3.172 0.001532 ** 
+factor(S_ID)NV            2.556e-03  1.019e-02   0.251 0.801924    
+factor(S_ID)NY            9.019e-02  6.737e-03  13.387  &lt; 2e-16 ***
+factor(S_ID)OH            6.640e-02  6.124e-03  10.841  &lt; 2e-16 ***
+factor(S_ID)OK           -5.224e-03  6.386e-03  -0.818 0.413389    
+factor(S_ID)OR           -2.591e-02  7.684e-03  -3.372 0.000757 ***
+factor(S_ID)PA            3.724e-02  6.498e-03   5.731 1.10e-08 ***
+factor(S_ID)RI            2.917e-02  1.661e-02   1.756 0.079153 .  
+factor(S_ID)SC           -2.186e-03  6.836e-03  -0.320 0.749214    
+factor(S_ID)SD            5.850e-02  6.774e-03   8.636  &lt; 2e-16 ***
+factor(S_ID)TN            1.758e-02  5.840e-03   3.011 0.002627 ** 
+factor(S_ID)TX           -2.587e-02  5.255e-03  -4.923 8.99e-07 ***
+factor(S_ID)UT           -1.833e-01  8.674e-03 -21.133  &lt; 2e-16 ***
+factor(S_ID)VA            8.289e-03  5.982e-03   1.386 0.165940    
+factor(S_ID)VT            4.375e-03  1.070e-02   0.409 0.682641    
+factor(S_ID)WA           -2.161e-02  7.514e-03  -2.876 0.004054 ** 
+factor(S_ID)WI            4.421e-02  6.515e-03   6.786 1.39e-11 ***
+factor(S_ID)WV            3.380e-02  6.758e-03   5.001 6.03e-07 ***
+factor(S_ID)WY            9.353e-04  9.028e-03   0.104 0.917493    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.03532 on 2955 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.6246,    Adjusted R-squared:  0.617 
+F-statistic: 81.96 on 60 and 2955 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Social Cohesion</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>modelnew16_3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> clustering_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew16_3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + 
+    SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.32819 -0.01871  0.00082  0.01995  0.15414 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       -7.344e-03  1.893e-02  -0.388 0.698126    
+INC_PC_16         -1.383e-06  8.247e-08 -16.774  &lt; 2e-16 ***
+GINI_16           -7.634e-02  2.331e-02  -3.275 0.001068 ** 
+Employment_Change -3.091e-02  6.414e-03  -4.819 1.51e-06 ***
+clustering_county  8.069e-01  4.110e-02  19.633  &lt; 2e-16 ***
+POP_DEN_16        -3.285e-08  4.078e-07  -0.081 0.935799    
+UNE_16             1.748e-03  5.501e-04   3.177 0.001503 ** 
+EDU1_16            9.661e-04  1.621e-04   5.961 2.81e-09 ***
+R_BLACK_16        -6.042e-04  7.773e-05  -7.773 1.05e-14 ***
+SEX_RATIO          2.154e-05  5.860e-05   0.368 0.713176    
+AGE_DEP_YOUNG     -1.112e-03  1.316e-04  -8.454  &lt; 2e-16 ***
+MARRIED            1.081e-03  1.528e-04   7.076 1.84e-12 ***
+factor(S_ID)AR    -9.034e-03  5.688e-03  -1.588 0.112328    
+factor(S_ID)AZ    -9.621e-02  1.009e-02  -9.531  &lt; 2e-16 ***
+factor(S_ID)CA    -2.482e-02  6.498e-03  -3.819 0.000137 ***
+factor(S_ID)CO     7.529e-03  6.363e-03   1.183 0.236815    
+factor(S_ID)CT     3.887e-02  1.277e-02   3.043 0.002362 ** 
+factor(S_ID)DC     7.249e-02  3.393e-02   2.137 0.032708 *  
+factor(S_ID)DE     3.508e-02  1.974e-02   1.777 0.075676 .  
+factor(S_ID)FL     1.244e-02  5.968e-03   2.084 0.037205 *  
+factor(S_ID)GA    -4.570e-03  4.883e-03  -0.936 0.349428    
+factor(S_ID)HI     3.028e-02  1.985e-02   1.525 0.127292    
+factor(S_ID)IA     7.142e-02  5.815e-03  12.282  &lt; 2e-16 ***
+factor(S_ID)ID    -5.589e-02  6.954e-03  -8.036 1.33e-15 ***
+factor(S_ID)IL     2.693e-02  5.629e-03   4.784 1.80e-06 ***
+factor(S_ID)IN     4.125e-02  5.747e-03   7.177 9.00e-13 ***
+factor(S_ID)KS    -9.931e-03  5.748e-03  -1.728 0.084167 .  
+factor(S_ID)KY     1.196e-02  5.349e-03   2.236 0.025433 *  
+factor(S_ID)LA     2.167e-03  5.886e-03   0.368 0.712795    
+factor(S_ID)MA     2.854e-03  1.025e-02   0.278 0.780725    
+factor(S_ID)MD     1.851e-02  8.116e-03   2.281 0.022635 *  
+factor(S_ID)ME     2.635e-02  9.575e-03   2.752 0.005963 ** 
+factor(S_ID)MI     2.964e-02  5.862e-03   5.055 4.56e-07 ***
+factor(S_ID)MN     5.025e-02  5.956e-03   8.438  &lt; 2e-16 ***
+factor(S_ID)MO     4.753e-02  5.453e-03   8.716  &lt; 2e-16 ***
+factor(S_ID)MS    -1.733e-03  5.585e-03  -0.310 0.756409    
+factor(S_ID)MT     9.202e-03  6.648e-03   1.384 0.166412    
+factor(S_ID)NC    -8.462e-04  5.323e-03  -0.159 0.873705    
+factor(S_ID)ND     5.732e-02  6.778e-03   8.457  &lt; 2e-16 ***
+factor(S_ID)NE     2.804e-02  6.040e-03   4.642 3.60e-06 ***
+factor(S_ID)NH     1.594e-02  1.160e-02   1.374 0.169479    
+factor(S_ID)NJ     3.547e-02  8.654e-03   4.099 4.27e-05 ***
+factor(S_ID)NM    -2.084e-02  7.689e-03  -2.710 0.006763 ** 
+factor(S_ID)NV     8.779e-03  9.607e-03   0.914 0.360923    
+factor(S_ID)NY     8.774e-02  6.356e-03  13.803  &lt; 2e-16 ***
+factor(S_ID)OH     6.867e-02  5.751e-03  11.940  &lt; 2e-16 ***
+factor(S_ID)OK     5.676e-03  5.924e-03   0.958 0.338105    
+factor(S_ID)OR    -1.763e-02  7.226e-03  -2.439 0.014770 *  
+factor(S_ID)PA     3.342e-02  6.138e-03   5.446 5.59e-08 ***
+factor(S_ID)RI     2.913e-02  1.569e-02   1.857 0.063418 .  
+factor(S_ID)SC     1.847e-03  6.459e-03   0.286 0.774916    
+factor(S_ID)SD     4.777e-02  6.418e-03   7.444 1.27e-13 ***
+factor(S_ID)TN     2.145e-02  5.506e-03   3.895 0.000100 ***
+factor(S_ID)TX    -1.369e-02  4.968e-03  -2.756 0.005889 ** 
+factor(S_ID)UT    -1.825e-01  8.186e-03 -22.291  &lt; 2e-16 ***
+factor(S_ID)VA     1.224e-02  5.621e-03   2.178 0.029468 *  
+factor(S_ID)VT    -1.449e-03  1.011e-02  -0.143 0.885993    
+factor(S_ID)WA    -1.498e-02  7.072e-03  -2.119 0.034184 *  
+factor(S_ID)WI     3.780e-02  6.149e-03   6.147 8.94e-10 ***
+factor(S_ID)WV     2.857e-02  6.359e-03   4.493 7.29e-06 ***
+factor(S_ID)WY    -4.525e-04  8.499e-03  -0.053 0.957547    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.03336 on 2955 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.6652,    Adjusted R-squared:  0.6584 
+F-statistic: 97.87 on 60 and 2955 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>modelnew16_4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> support_ratio_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew16_4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + 
+    SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.304875 -0.018571  0.000031  0.018885  0.243267 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)          -6.680e-01  5.253e-02 -12.718  &lt; 2e-16 ***
+INC_PC_16            -1.478e-06  8.449e-08 -17.494  &lt; 2e-16 ***
+GINI_16              -6.790e-02  2.402e-02  -2.826 0.004739 ** 
+Employment_Change    -1.217e-02  6.687e-03  -1.820 0.068847 .  
+support_ratio_county  7.280e-01  5.061e-02  14.385  &lt; 2e-16 ***
+POP_DEN_16            9.078e-08  4.244e-07   0.214 0.830655    
+UNE_16                1.974e-03  5.666e-04   3.484 0.000501 ***
+EDU1_16               1.570e-03  1.603e-04   9.796  &lt; 2e-16 ***
+R_BLACK_16           -3.059e-04  7.829e-05  -3.908 9.53e-05 ***
+SEX_RATIO             9.204e-05  6.027e-05   1.527 0.126814    
+AGE_DEP_YOUNG        -1.246e-03  1.349e-04  -9.236  &lt; 2e-16 ***
+MARRIED               1.424e-03  1.554e-04   9.163  &lt; 2e-16 ***
+factor(S_ID)AR       -9.011e-03  5.846e-03  -1.541 0.123331    
+factor(S_ID)AZ       -1.023e-01  1.036e-02  -9.867  &lt; 2e-16 ***
+factor(S_ID)CA       -2.670e-02  6.684e-03  -3.995 6.62e-05 ***
+factor(S_ID)CO        6.989e-03  6.543e-03   1.068 0.285504    
+factor(S_ID)CT        4.025e-02  1.313e-02   3.066 0.002190 ** 
+factor(S_ID)DC        6.583e-02  3.487e-02   1.888 0.059130 .  
+factor(S_ID)DE        1.580e-02  2.027e-02   0.779 0.435913    
+factor(S_ID)FL        3.089e-03  6.098e-03   0.507 0.612504    
+factor(S_ID)GA       -4.420e-03  5.029e-03  -0.879 0.379507    
+factor(S_ID)HI        2.838e-02  2.041e-02   1.391 0.164443    
+factor(S_ID)IA        7.900e-02  5.948e-03  13.282  &lt; 2e-16 ***
+factor(S_ID)ID       -5.880e-02  7.145e-03  -8.229 2.80e-16 ***
+factor(S_ID)IL        3.447e-02  5.760e-03   5.985 2.43e-09 ***
+factor(S_ID)IN        4.299e-02  5.906e-03   7.279 4.29e-13 ***
+factor(S_ID)KS       -8.026e-03  5.909e-03  -1.358 0.174492    
+factor(S_ID)KY        1.541e-02  5.497e-03   2.804 0.005087 ** 
+factor(S_ID)LA        1.939e-03  6.050e-03   0.320 0.748629    
+factor(S_ID)MA        6.627e-03  1.053e-02   0.629 0.529347    
+factor(S_ID)MD        1.435e-02  8.340e-03   1.721 0.085350 .  
+factor(S_ID)ME        3.325e-02  9.830e-03   3.382 0.000728 ***
+factor(S_ID)MI        3.427e-02  6.017e-03   5.695 1.36e-08 ***
+factor(S_ID)MN        6.117e-02  6.085e-03  10.052  &lt; 2e-16 ***
+factor(S_ID)MO        5.194e-02  5.603e-03   9.271  &lt; 2e-16 ***
+factor(S_ID)MS        3.023e-03  5.734e-03   0.527 0.598121    
+factor(S_ID)MT        1.462e-02  6.821e-03   2.144 0.032119 *  
+factor(S_ID)NC       -5.050e-03  5.463e-03  -0.924 0.355352    
+factor(S_ID)ND        6.407e-02  6.946e-03   9.224  &lt; 2e-16 ***
+factor(S_ID)NE        2.933e-02  6.210e-03   4.722 2.44e-06 ***
+factor(S_ID)NH        2.082e-02  1.192e-02   1.747 0.080776 .  
+factor(S_ID)NJ        3.596e-02  8.895e-03   4.043 5.42e-05 ***
+factor(S_ID)NM       -2.394e-02  7.900e-03  -3.030 0.002468 ** 
+factor(S_ID)NV        1.821e-02  9.913e-03   1.837 0.066311 .  
+factor(S_ID)NY        8.765e-02  6.536e-03  13.410  &lt; 2e-16 ***
+factor(S_ID)OH        6.763e-02  5.913e-03  11.437  &lt; 2e-16 ***
+factor(S_ID)OK        2.411e-04  6.084e-03   0.040 0.968392    
+factor(S_ID)OR       -1.946e-02  7.426e-03  -2.621 0.008821 ** 
+factor(S_ID)PA        3.443e-02  6.309e-03   5.456 5.26e-08 ***
+factor(S_ID)RI        2.877e-02  1.612e-02   1.785 0.074417 .  
+factor(S_ID)SC       -1.829e-03  6.636e-03  -0.276 0.782818    
+factor(S_ID)SD        5.481e-02  6.574e-03   8.336  &lt; 2e-16 ***
+factor(S_ID)TN        2.173e-02  5.661e-03   3.839 0.000126 ***
+factor(S_ID)TX       -2.105e-02  5.083e-03  -4.141 3.56e-05 ***
+factor(S_ID)UT       -1.845e-01  8.416e-03 -21.926  &lt; 2e-16 ***
+factor(S_ID)VA        1.656e-02  5.789e-03   2.860 0.004265 ** 
+factor(S_ID)VT        3.435e-03  1.038e-02   0.331 0.740757    
+factor(S_ID)WA       -1.504e-02  7.270e-03  -2.069 0.038653 *  
+factor(S_ID)WI        4.320e-02  6.308e-03   6.849 8.99e-12 ***
+factor(S_ID)WV        3.598e-02  6.520e-03   5.518 3.73e-08 ***
+factor(S_ID)WY       -4.333e-03  8.754e-03  -0.495 0.620645    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.03429 on 2955 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.6463,    Adjusted R-squared:  0.6391 
+F-statistic:    90 on 60 and 2955 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Economic Connectedness</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>modelnew16_5 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> ec_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew16_5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + 
+    SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.296632 -0.019135  0.000415  0.020358  0.150660 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        1.247e-01  2.145e-02   5.815 6.72e-09 ***
+INC_PC_16         -1.440e-06  8.681e-08 -16.589  &lt; 2e-16 ***
+GINI_16           -6.489e-02  2.493e-02  -2.603 0.009281 ** 
+Employment_Change -3.017e-02  6.759e-03  -4.464 8.37e-06 ***
+ec_county         -9.786e-02  8.180e-03 -11.964  &lt; 2e-16 ***
+POP_DEN_16        -9.832e-07  4.165e-07  -2.361 0.018313 *  
+UNE_16            -1.349e-04  6.221e-04  -0.217 0.828394    
+EDU1_16            1.127e-03  1.863e-04   6.052 1.62e-09 ***
+R_BLACK_16        -4.448e-04  8.209e-05  -5.418 6.52e-08 ***
+SEX_RATIO          1.047e-04  6.337e-05   1.652 0.098689 .  
+AGE_DEP_YOUNG     -1.745e-03  1.420e-04 -12.289  &lt; 2e-16 ***
+MARRIED            1.983e-03  1.652e-04  12.005  &lt; 2e-16 ***
+factor(S_ID)AR    -3.909e-03  5.894e-03  -0.663 0.507284    
+factor(S_ID)AZ    -1.032e-01  1.042e-02  -9.902  &lt; 2e-16 ***
+factor(S_ID)CA    -2.729e-02  6.772e-03  -4.029 5.74e-05 ***
+factor(S_ID)CO     1.463e-02  6.772e-03   2.160 0.030824 *  
+factor(S_ID)CT     5.499e-02  1.322e-02   4.160 3.27e-05 ***
+factor(S_ID)DC     9.112e-02  3.504e-02   2.601 0.009355 ** 
+factor(S_ID)DE     2.371e-02  2.033e-02   1.166 0.243522    
+factor(S_ID)FL    -4.446e-03  6.131e-03  -0.725 0.468440    
+factor(S_ID)GA    -1.099e-02  5.103e-03  -2.153 0.031363 *  
+factor(S_ID)HI     5.378e-02  2.054e-02   2.618 0.008892 ** 
+factor(S_ID)IA     1.014e-01  6.108e-03  16.599  &lt; 2e-16 ***
+factor(S_ID)ID    -5.179e-02  7.273e-03  -7.121 1.34e-12 ***
+factor(S_ID)IL     4.634e-02  5.831e-03   7.948 2.69e-15 ***
+factor(S_ID)IN     5.138e-02  5.975e-03   8.599  &lt; 2e-16 ***
+factor(S_ID)KS     1.173e-02  6.036e-03   1.943 0.052061 .  
+factor(S_ID)KY     3.049e-02  5.709e-03   5.340 9.99e-08 ***
+factor(S_ID)LA     1.514e-02  6.190e-03   2.446 0.014491 *  
+factor(S_ID)MA     1.981e-02  1.061e-02   1.867 0.062053 .  
+factor(S_ID)MD     3.255e-02  8.499e-03   3.830 0.000131 ***
+factor(S_ID)ME     3.903e-02  9.877e-03   3.952 7.94e-05 ***
+factor(S_ID)MI     3.981e-02  6.088e-03   6.539 7.28e-11 ***
+factor(S_ID)MN     8.469e-02  6.365e-03  13.306  &lt; 2e-16 ***
+factor(S_ID)MO     6.307e-02  5.741e-03  10.987  &lt; 2e-16 ***
+factor(S_ID)MS     1.557e-02  5.870e-03   2.653 0.008019 ** 
+factor(S_ID)MT     3.192e-02  7.178e-03   4.447 9.05e-06 ***
+factor(S_ID)NC    -9.718e-03  5.511e-03  -1.763 0.077932 .  
+factor(S_ID)ND     9.441e-02  7.313e-03  12.909  &lt; 2e-16 ***
+factor(S_ID)NE     5.038e-02  6.401e-03   7.871 4.93e-15 ***
+factor(S_ID)NH     4.200e-02  1.210e-02   3.472 0.000524 ***
+factor(S_ID)NJ     4.800e-02  8.985e-03   5.342 9.91e-08 ***
+factor(S_ID)NM    -3.059e-02  8.193e-03  -3.733 0.000193 ***
+factor(S_ID)NV     1.148e-02  1.018e-02   1.128 0.259533    
+factor(S_ID)NY     9.964e-02  6.608e-03  15.078  &lt; 2e-16 ***
+factor(S_ID)OH     7.487e-02  5.975e-03  12.530  &lt; 2e-16 ***
+factor(S_ID)OK     9.119e-03  6.166e-03   1.479 0.139287    
+factor(S_ID)OR    -2.086e-02  7.543e-03  -2.765 0.005725 ** 
+factor(S_ID)PA     4.612e-02  6.380e-03   7.228 6.24e-13 ***
+factor(S_ID)RI     4.945e-02  1.626e-02   3.042 0.002373 ** 
+factor(S_ID)SC    -4.570e-03  6.680e-03  -0.684 0.493964    
+factor(S_ID)SD     8.005e-02  6.907e-03  11.590  &lt; 2e-16 ***
+factor(S_ID)TN     1.949e-02  5.696e-03   3.421 0.000633 ***
+factor(S_ID)TX    -1.241e-02  5.238e-03  -2.370 0.017877 *  
+factor(S_ID)UT    -1.635e-01  8.870e-03 -18.438  &lt; 2e-16 ***
+factor(S_ID)VA     2.015e-02  5.879e-03   3.428 0.000618 ***
+factor(S_ID)VT     1.662e-02  1.046e-02   1.589 0.112178    
+factor(S_ID)WA    -8.857e-03  7.353e-03  -1.205 0.228487    
+factor(S_ID)WI     6.045e-02  6.444e-03   9.381  &lt; 2e-16 ***
+factor(S_ID)WV     4.523e-02  6.595e-03   6.858 8.52e-12 ***
+factor(S_ID)WY     1.763e-02  8.836e-03   1.995 0.046143 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.03437 on 2889 degrees of freedom
+  (67 observations deleted due to missingness)
+Multiple R-squared:  0.6503,    Adjusted R-squared:  0.643 
+F-statistic: 89.54 on 60 and 2889 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p><strong>Table 3</strong> Basic model for Trump Margin 2020, with META data</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Civic Engagement</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>modelnew20_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_20_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> civic_organizations_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew20_1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + 
+    R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), 
+    data = data_trump2)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.197105 -0.025196  0.000317  0.025810  0.217718 
+
+Coefficients:
+                             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                 3.337e-03  2.403e-02   0.139 0.889573    
+INC_PC_16                  -2.170e-06  1.037e-07 -20.929  &lt; 2e-16 ***
+GINI_16                    -1.235e-02  2.960e-02  -0.417 0.676519    
+Employment_Change          -2.811e-02  8.215e-03  -3.421 0.000632 ***
+civic_organizations_county  3.883e-01  9.714e-02   3.997 6.57e-05 ***
+POP_DEN_16                  2.979e-07  5.157e-07   0.578 0.563496    
+UNE_16                      9.800e-04  7.018e-04   1.396 0.162707    
+EDU1_16                     3.734e-03  1.954e-04  19.108  &lt; 2e-16 ***
+R_BLACK_16                 -4.498e-04  9.725e-05  -4.626 3.90e-06 ***
+SEX_RATIO                   1.237e-04  7.479e-05   1.653 0.098339 .  
+AGE_DEP_YOUNG              -1.053e-03  1.743e-04  -6.039 1.74e-09 ***
+MARRIED                     1.686e-03  1.956e-04   8.619  &lt; 2e-16 ***
+factor(S_ID)AR              1.843e-02  7.263e-03   2.537 0.011233 *  
+factor(S_ID)AZ             -3.491e-02  1.287e-02  -2.712 0.006719 ** 
+factor(S_ID)CA             -2.260e-02  8.286e-03  -2.728 0.006408 ** 
+factor(S_ID)CO              4.600e-03  8.195e-03   0.561 0.574672    
+factor(S_ID)CT              4.210e-02  1.631e-02   2.582 0.009871 ** 
+factor(S_ID)DC              8.675e-02  4.339e-02   1.999 0.045689 *  
+factor(S_ID)DE             -2.968e-03  2.518e-02  -0.118 0.906166    
+factor(S_ID)FL              8.402e-03  7.561e-03   1.111 0.266604    
+factor(S_ID)GA             -1.978e-02  6.222e-03  -3.180 0.001490 ** 
+factor(S_ID)HI              8.476e-02  2.535e-02   3.344 0.000837 ***
+factor(S_ID)IA              1.218e-01  7.385e-03  16.495  &lt; 2e-16 ***
+factor(S_ID)ID             -5.716e-03  8.903e-03  -0.642 0.520867    
+factor(S_ID)IL              6.603e-02  7.148e-03   9.238  &lt; 2e-16 ***
+factor(S_ID)IN              5.770e-02  7.341e-03   7.860 5.35e-15 ***
+factor(S_ID)KS              1.382e-02  7.407e-03   1.865 0.062249 .  
+factor(S_ID)KY              9.678e-03  6.827e-03   1.418 0.156438    
+factor(S_ID)LA              8.362e-03  7.516e-03   1.113 0.265947    
+factor(S_ID)MA              1.430e-02  1.309e-02   1.092 0.274919    
+factor(S_ID)MD              5.487e-03  1.037e-02   0.529 0.596676    
+factor(S_ID)ME              4.556e-02  1.222e-02   3.727 0.000197 ***
+factor(S_ID)MI              4.854e-02  7.488e-03   6.482 1.06e-10 ***
+factor(S_ID)MN              9.083e-02  7.579e-03  11.985  &lt; 2e-16 ***
+factor(S_ID)MO              6.118e-02  6.980e-03   8.766  &lt; 2e-16 ***
+factor(S_ID)MS             -3.677e-03  7.122e-03  -0.516 0.605668    
+factor(S_ID)MT              3.437e-02  8.542e-03   4.024 5.88e-05 ***
+factor(S_ID)NC             -1.480e-03  6.792e-03  -0.218 0.827508    
+factor(S_ID)ND              1.099e-01  8.629e-03  12.735  &lt; 2e-16 ***
+factor(S_ID)NE              5.450e-02  7.742e-03   7.040 2.39e-12 ***
+factor(S_ID)NH              2.641e-02  1.481e-02   1.783 0.074688 .  
+factor(S_ID)NJ              4.164e-02  1.105e-02   3.769 0.000167 ***
+factor(S_ID)NM              1.525e-02  9.861e-03   1.547 0.122036    
+factor(S_ID)NV              3.358e-02  1.227e-02   2.738 0.006224 ** 
+factor(S_ID)NY              9.567e-02  8.125e-03  11.776  &lt; 2e-16 ***
+factor(S_ID)OH              9.810e-02  7.345e-03  13.357  &lt; 2e-16 ***
+factor(S_ID)OK              1.767e-02  7.564e-03   2.336 0.019576 *  
+factor(S_ID)OR             -4.002e-03  9.260e-03  -0.432 0.665631    
+factor(S_ID)PA              4.478e-02  7.832e-03   5.718 1.18e-08 ***
+factor(S_ID)RI              3.167e-02  2.003e-02   1.582 0.113869    
+factor(S_ID)SC              5.158e-03  8.243e-03   0.626 0.531518    
+factor(S_ID)SD              7.444e-02  8.194e-03   9.085  &lt; 2e-16 ***
+factor(S_ID)TN              2.854e-02  7.029e-03   4.061 5.02e-05 ***
+factor(S_ID)TX             -1.451e-02  6.327e-03  -2.293 0.021908 *  
+factor(S_ID)UT             -7.541e-02  1.049e-02  -7.189 8.21e-13 ***
+factor(S_ID)VA              1.750e-02  7.203e-03   2.430 0.015175 *  
+factor(S_ID)VT              2.289e-02  1.292e-02   1.771 0.076679 .  
+factor(S_ID)WA             -1.363e-02  9.058e-03  -1.505 0.132388    
+factor(S_ID)WI              7.359e-02  7.841e-03   9.385  &lt; 2e-16 ***
+factor(S_ID)WV              3.895e-02  8.098e-03   4.810 1.59e-06 ***
+factor(S_ID)WY              3.718e-02  1.091e-02   3.408 0.000664 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.04259 on 2955 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.5731,    Adjusted R-squared:  0.5644 
+F-statistic: 66.11 on 60 and 2955 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>modelnew20_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_20_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> volunteering_rate_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew20_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + 
+    R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), 
+    data = data_trump2)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.197244 -0.024752  0.000403  0.025793  0.216428 
+
+Coefficients:
+                           Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)              -2.117e-03  2.411e-02  -0.088 0.930057    
+INC_PC_16                -2.162e-06  1.038e-07 -20.838  &lt; 2e-16 ***
+GINI_16                  -6.022e-03  2.951e-02  -0.204 0.838317    
+Employment_Change        -2.537e-02  8.186e-03  -3.099 0.001961 ** 
+volunteering_rate_county  1.170e-01  2.909e-02   4.023 5.89e-05 ***
+POP_DEN_16                2.187e-07  5.149e-07   0.425 0.671034    
+UNE_16                    9.178e-04  7.020e-04   1.307 0.191189    
+EDU1_16                   3.852e-03  1.986e-04  19.398  &lt; 2e-16 ***
+R_BLACK_16               -3.878e-04  9.836e-05  -3.943 8.25e-05 ***
+SEX_RATIO                 1.118e-04  7.482e-05   1.494 0.135390    
+AGE_DEP_YOUNG            -1.161e-03  1.688e-04  -6.877 7.42e-12 ***
+MARRIED                   1.779e-03  1.930e-04   9.217  &lt; 2e-16 ***
+factor(S_ID)AR            1.598e-02  7.298e-03   2.190 0.028591 *  
+factor(S_ID)AZ           -3.405e-02  1.286e-02  -2.647 0.008167 ** 
+factor(S_ID)CA           -2.306e-02  8.293e-03  -2.780 0.005469 ** 
+factor(S_ID)CO            7.827e-03  8.122e-03   0.964 0.335320    
+factor(S_ID)CT            4.161e-02  1.631e-02   2.551 0.010776 *  
+factor(S_ID)DC            9.060e-02  4.334e-02   2.090 0.036677 *  
+factor(S_ID)DE           -2.796e-03  2.518e-02  -0.111 0.911583    
+factor(S_ID)FL            8.019e-03  7.561e-03   1.061 0.288993    
+factor(S_ID)GA           -2.011e-02  6.225e-03  -3.231 0.001249 ** 
+factor(S_ID)HI            8.317e-02  2.536e-02   3.280 0.001051 ** 
+factor(S_ID)IA            1.211e-01  7.399e-03  16.364  &lt; 2e-16 ***
+factor(S_ID)ID           -7.190e-03  8.939e-03  -0.804 0.421247    
+factor(S_ID)IL            6.345e-02  7.196e-03   8.818  &lt; 2e-16 ***
+factor(S_ID)IN            5.446e-02  7.419e-03   7.340 2.74e-13 ***
+factor(S_ID)KS            1.305e-02  7.437e-03   1.754 0.079459 .  
+factor(S_ID)KY            8.314e-03  6.834e-03   1.217 0.223845    
+factor(S_ID)LA            4.922e-03  7.552e-03   0.652 0.514573    
+factor(S_ID)MA            1.436e-02  1.309e-02   1.097 0.272652    
+factor(S_ID)MD            5.265e-03  1.037e-02   0.508 0.611686    
+factor(S_ID)ME            4.568e-02  1.222e-02   3.738 0.000189 ***
+factor(S_ID)MI            4.301e-02  7.699e-03   5.586 2.54e-08 ***
+factor(S_ID)MN            9.206e-02  7.561e-03  12.175  &lt; 2e-16 ***
+factor(S_ID)MO            5.898e-02  7.043e-03   8.375  &lt; 2e-16 ***
+factor(S_ID)MS           -5.494e-03  7.132e-03  -0.770 0.441181    
+factor(S_ID)MT            3.628e-02  8.489e-03   4.273 1.99e-05 ***
+factor(S_ID)NC           -5.531e-04  6.783e-03  -0.082 0.935022    
+factor(S_ID)ND            1.102e-01  8.623e-03  12.782  &lt; 2e-16 ***
+factor(S_ID)NE            5.459e-02  7.739e-03   7.054 2.16e-12 ***
+factor(S_ID)NH            2.762e-02  1.480e-02   1.866 0.062173 .  
+factor(S_ID)NJ            4.061e-02  1.105e-02   3.674 0.000243 ***
+factor(S_ID)NM            1.838e-02  9.814e-03   1.873 0.061129 .  
+factor(S_ID)NV            3.160e-02  1.229e-02   2.572 0.010159 *  
+factor(S_ID)NY            9.577e-02  8.123e-03  11.790  &lt; 2e-16 ***
+factor(S_ID)OH            9.564e-02  7.384e-03  12.952  &lt; 2e-16 ***
+factor(S_ID)OK            1.307e-02  7.699e-03   1.698 0.089680 .  
+factor(S_ID)OR           -4.210e-03  9.264e-03  -0.454 0.649548    
+factor(S_ID)PA            4.434e-02  7.835e-03   5.660 1.66e-08 ***
+factor(S_ID)RI            3.135e-02  2.003e-02   1.565 0.117637    
+factor(S_ID)SC            5.558e-03  8.242e-03   0.674 0.500185    
+factor(S_ID)SD            7.567e-02  8.167e-03   9.265  &lt; 2e-16 ***
+factor(S_ID)TN            2.647e-02  7.041e-03   3.759 0.000174 ***
+factor(S_ID)TX           -1.496e-02  6.336e-03  -2.361 0.018289 *  
+factor(S_ID)UT           -7.331e-02  1.046e-02  -7.010 2.93e-12 ***
+factor(S_ID)VA            1.706e-02  7.212e-03   2.366 0.018059 *  
+factor(S_ID)VT            2.493e-02  1.290e-02   1.933 0.053316 .  
+factor(S_ID)WA           -1.375e-02  9.060e-03  -1.518 0.129215    
+factor(S_ID)WI            7.276e-02  7.855e-03   9.263  &lt; 2e-16 ***
+factor(S_ID)WV            3.489e-02  8.148e-03   4.282 1.91e-05 ***
+factor(S_ID)WY            3.814e-02  1.088e-02   3.504 0.000465 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.04259 on 2955 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.5731,    Adjusted R-squared:  0.5645 
+F-statistic: 66.12 on 60 and 2955 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Social Cohesion</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>modelnew20_3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_20_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> clustering_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew20_3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + 
+    SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.167088 -0.023753  0.000572  0.024092  0.228924 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)       -5.157e-02  2.230e-02  -2.312 0.020844 *  
+INC_PC_16         -1.783e-06  9.716e-08 -18.353  &lt; 2e-16 ***
+GINI_16           -8.683e-02  2.746e-02  -3.162 0.001583 ** 
+Employment_Change -2.888e-02  7.555e-03  -3.822 0.000135 ***
+clustering_county  1.119e+00  4.841e-02  23.121  &lt; 2e-16 ***
+POP_DEN_16         1.833e-06  4.804e-07   3.815 0.000139 ***
+UNE_16             1.502e-03  6.480e-04   2.318 0.020536 *  
+EDU1_16            2.248e-03  1.909e-04  11.775  &lt; 2e-16 ***
+R_BLACK_16        -8.693e-04  9.157e-05  -9.493  &lt; 2e-16 ***
+SEX_RATIO          7.764e-05  6.903e-05   1.125 0.260777    
+AGE_DEP_YOUNG     -9.563e-04  1.550e-04  -6.170 7.76e-10 ***
+MARRIED            1.175e-03  1.800e-04   6.529 7.75e-11 ***
+factor(S_ID)AR     1.827e-02  6.700e-03   2.726 0.006441 ** 
+factor(S_ID)AZ    -1.609e-02  1.189e-02  -1.353 0.176139    
+factor(S_ID)CA    -5.476e-03  7.655e-03  -0.715 0.474481    
+factor(S_ID)CO     1.665e-02  7.496e-03   2.221 0.026394 *  
+factor(S_ID)CT     3.921e-02  1.505e-02   2.606 0.009199 ** 
+factor(S_ID)DC     1.146e-01  3.997e-02   2.867 0.004180 ** 
+factor(S_ID)DE     2.148e-02  2.326e-02   0.924 0.355655    
+factor(S_ID)FL     2.843e-02  7.031e-03   4.043 5.40e-05 ***
+factor(S_ID)GA    -1.024e-02  5.753e-03  -1.781 0.075085 .  
+factor(S_ID)HI     8.455e-02  2.339e-02   3.615 0.000305 ***
+factor(S_ID)IA     1.041e-01  6.850e-03  15.199  &lt; 2e-16 ***
+factor(S_ID)ID     2.968e-03  8.193e-03   0.362 0.717175    
+factor(S_ID)IL     5.049e-02  6.631e-03   7.614 3.56e-14 ***
+factor(S_ID)IN     5.353e-02  6.771e-03   7.906 3.72e-15 ***
+factor(S_ID)KS     6.961e-03  6.772e-03   1.028 0.304048    
+factor(S_ID)KY     6.666e-03  6.301e-03   1.058 0.290150    
+factor(S_ID)LA     6.797e-03  6.934e-03   0.980 0.327073    
+factor(S_ID)MA     7.830e-03  1.208e-02   0.648 0.516830    
+factor(S_ID)MD     1.304e-02  9.562e-03   1.364 0.172769    
+factor(S_ID)ME     3.418e-02  1.128e-02   3.030 0.002464 ** 
+factor(S_ID)MI     4.145e-02  6.906e-03   6.002 2.19e-09 ***
+factor(S_ID)MN     7.512e-02  7.016e-03  10.707  &lt; 2e-16 ***
+factor(S_ID)MO     5.864e-02  6.424e-03   9.128  &lt; 2e-16 ***
+factor(S_ID)MS    -1.167e-02  6.580e-03  -1.773 0.076280 .  
+factor(S_ID)MT     2.505e-02  7.832e-03   3.198 0.001398 ** 
+factor(S_ID)NC     9.364e-03  6.271e-03   1.493 0.135483    
+factor(S_ID)ND     9.378e-02  7.984e-03  11.746  &lt; 2e-16 ***
+factor(S_ID)NE     4.780e-02  7.115e-03   6.717 2.21e-11 ***
+factor(S_ID)NH     2.259e-02  1.366e-02   1.654 0.098240 .  
+factor(S_ID)NJ     4.126e-02  1.019e-02   4.047 5.33e-05 ***
+factor(S_ID)NM     2.499e-02  9.058e-03   2.759 0.005838 ** 
+factor(S_ID)NV     3.903e-02  1.132e-02   3.449 0.000571 ***
+factor(S_ID)NY     9.162e-02  7.488e-03  12.235  &lt; 2e-16 ***
+factor(S_ID)OH     9.751e-02  6.776e-03  14.392  &lt; 2e-16 ***
+factor(S_ID)OK     2.578e-02  6.979e-03   3.693 0.000225 ***
+factor(S_ID)OR     5.806e-03  8.513e-03   0.682 0.495272    
+factor(S_ID)PA     3.857e-02  7.230e-03   5.334 1.03e-07 ***
+factor(S_ID)RI     3.128e-02  1.848e-02   1.693 0.090646 .  
+factor(S_ID)SC     1.117e-02  7.609e-03   1.468 0.142340    
+factor(S_ID)SD     5.993e-02  7.560e-03   7.927 3.15e-15 ***
+factor(S_ID)TN     3.112e-02  6.487e-03   4.798 1.68e-06 ***
+factor(S_ID)TX     1.004e-03  5.853e-03   0.172 0.863814    
+factor(S_ID)UT    -7.277e-02  9.644e-03  -7.546 5.95e-14 ***
+factor(S_ID)VA     2.136e-02  6.622e-03   3.226 0.001271 ** 
+factor(S_ID)VT     1.622e-02  1.191e-02   1.362 0.173157    
+factor(S_ID)WA    -5.838e-03  8.331e-03  -0.701 0.483487    
+factor(S_ID)WI     6.281e-02  7.244e-03   8.671  &lt; 2e-16 ***
+factor(S_ID)WV     2.615e-02  7.491e-03   3.491 0.000488 ***
+factor(S_ID)WY     3.469e-02  1.001e-02   3.465 0.000538 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.0393 on 2955 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.6365,    Adjusted R-squared:  0.6292 
+F-statistic: 86.25 on 60 and 2955 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>modelnew20_4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_20_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> support_ratio_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew20_4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + 
+    SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.19500 -0.02502 -0.00049  0.02430  0.30645 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)          -8.931e-01  6.295e-02 -14.186  &lt; 2e-16 ***
+INC_PC_16            -1.935e-06  1.013e-07 -19.112  &lt; 2e-16 ***
+GINI_16              -6.952e-02  2.879e-02  -2.415 0.015814 *  
+Employment_Change    -4.614e-03  8.014e-03  -0.576 0.564796    
+support_ratio_county  9.321e-01  6.065e-02  15.368  &lt; 2e-16 ***
+POP_DEN_16            1.864e-06  5.087e-07   3.665 0.000252 ***
+UNE_16                1.752e-03  6.791e-04   2.580 0.009935 ** 
+EDU1_16               3.134e-03  1.921e-04  16.314  &lt; 2e-16 ***
+R_BLACK_16           -4.548e-04  9.384e-05  -4.847 1.32e-06 ***
+SEX_RATIO             1.713e-04  7.223e-05   2.371 0.017781 *  
+AGE_DEP_YOUNG        -1.150e-03  1.617e-04  -7.111 1.44e-12 ***
+MARRIED               1.664e-03  1.863e-04   8.932  &lt; 2e-16 ***
+factor(S_ID)AR        1.835e-02  7.007e-03   2.619 0.008872 ** 
+factor(S_ID)AZ       -2.517e-02  1.242e-02  -2.026 0.042839 *  
+factor(S_ID)CA       -9.041e-03  8.011e-03  -1.129 0.259159    
+factor(S_ID)CO        1.538e-02  7.841e-03   1.962 0.049896 *  
+factor(S_ID)CT        4.124e-02  1.573e-02   2.621 0.008811 ** 
+factor(S_ID)DC        1.047e-01  4.179e-02   2.506 0.012259 *  
+factor(S_ID)DE       -5.031e-03  2.430e-02  -0.207 0.835958    
+factor(S_ID)FL        1.490e-02  7.308e-03   2.039 0.041561 *  
+factor(S_ID)GA       -1.074e-02  6.027e-03  -1.782 0.074914 .  
+factor(S_ID)HI        8.226e-02  2.446e-02   3.363 0.000780 ***
+factor(S_ID)IA        1.154e-01  7.129e-03  16.180  &lt; 2e-16 ***
+factor(S_ID)ID       -1.208e-03  8.564e-03  -0.141 0.887847    
+factor(S_ID)IL        6.141e-02  6.903e-03   8.896  &lt; 2e-16 ***
+factor(S_ID)IN        5.618e-02  7.078e-03   7.937 2.91e-15 ***
+factor(S_ID)KS        1.028e-02  7.082e-03   1.451 0.146840    
+factor(S_ID)KY        1.131e-02  6.589e-03   1.716 0.086197 .  
+factor(S_ID)LA        6.592e-03  7.252e-03   0.909 0.363393    
+factor(S_ID)MA        1.330e-02  1.263e-02   1.054 0.292197    
+factor(S_ID)MD        7.267e-03  9.995e-03   0.727 0.467244    
+factor(S_ID)ME        4.409e-02  1.178e-02   3.743 0.000186 ***
+factor(S_ID)MI        4.808e-02  7.212e-03   6.666 3.12e-11 ***
+factor(S_ID)MN        9.048e-02  7.293e-03  12.406  &lt; 2e-16 ***
+factor(S_ID)MO        6.466e-02  6.715e-03   9.629  &lt; 2e-16 ***
+factor(S_ID)MS       -4.983e-03  6.872e-03  -0.725 0.468442    
+factor(S_ID)MT        3.306e-02  8.175e-03   4.045 5.38e-05 ***
+factor(S_ID)NC        3.258e-03  6.547e-03   0.498 0.618828    
+factor(S_ID)ND        1.039e-01  8.325e-03  12.474  &lt; 2e-16 ***
+factor(S_ID)NE        5.022e-02  7.443e-03   6.747 1.80e-11 ***
+factor(S_ID)NH        2.930e-02  1.428e-02   2.052 0.040301 *  
+factor(S_ID)NJ        4.191e-02  1.066e-02   3.931 8.66e-05 ***
+factor(S_ID)NM        2.057e-02  9.469e-03   2.172 0.029900 *  
+factor(S_ID)NV        5.076e-02  1.188e-02   4.273 1.99e-05 ***
+factor(S_ID)NY        9.197e-02  7.834e-03  11.740  &lt; 2e-16 ***
+factor(S_ID)OH        9.627e-02  7.087e-03  13.585  &lt; 2e-16 ***
+factor(S_ID)OK        1.829e-02  7.292e-03   2.509 0.012166 *  
+factor(S_ID)OR        2.964e-03  8.900e-03   0.333 0.739121    
+factor(S_ID)PA        4.039e-02  7.562e-03   5.341 9.92e-08 ***
+factor(S_ID)RI        3.083e-02  1.932e-02   1.595 0.110714    
+factor(S_ID)SC        6.024e-03  7.953e-03   0.757 0.448813    
+factor(S_ID)SD        7.031e-02  7.880e-03   8.923  &lt; 2e-16 ***
+factor(S_ID)TN        3.126e-02  6.785e-03   4.608 4.24e-06 ***
+factor(S_ID)TX       -9.470e-03  6.092e-03  -1.554 0.120200    
+factor(S_ID)UT       -7.533e-02  1.009e-02  -7.467 1.07e-13 ***
+factor(S_ID)VA        2.677e-02  6.938e-03   3.859 0.000116 ***
+factor(S_ID)VT        2.327e-02  1.244e-02   1.870 0.061603 .  
+factor(S_ID)WA       -6.278e-03  8.714e-03  -0.720 0.471323    
+factor(S_ID)WI        7.069e-02  7.560e-03   9.351  &lt; 2e-16 ***
+factor(S_ID)WV        3.659e-02  7.814e-03   4.682 2.96e-06 ***
+factor(S_ID)WY        3.028e-02  1.049e-02   2.886 0.003932 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.04109 on 2955 degrees of freedom
+  (1 observation deleted due to missingness)
+Multiple R-squared:  0.6026,    Adjusted R-squared:  0.5945 
+F-statistic: 74.67 on 60 and 2955 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Economic Connectedness</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>modelnew20_5 <span class="ot">&lt;-</span> <span class="fu">lm</span>(MAR_T_20_new <span class="sc">~</span> INC_PC_16 <span class="sc">+</span> GINI_16 <span class="sc">+</span> Employment_Change <span class="sc">+</span> ec_county <span class="sc">+</span> POP_DEN_16 <span class="sc">+</span> UNE_16 <span class="sc">+</span> EDU1_16 <span class="sc">+</span> R_BLACK_16 <span class="sc">+</span> SEX_RATIO <span class="sc">+</span> AGE_DEP_YOUNG <span class="sc">+</span> MARRIED <span class="sc">+</span> <span class="fu">factor</span>(S_ID), <span class="at">data =</span> data_trump2)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelnew20_5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + 
+    ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + 
+    SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.198283 -0.024849  0.000339  0.025151  0.201322 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)        6.214e-02  2.637e-02   2.357 0.018503 *  
+INC_PC_16         -2.041e-06  1.067e-07 -19.122  &lt; 2e-16 ***
+GINI_16           -2.916e-02  3.064e-02  -0.952 0.341250    
+Employment_Change -2.843e-02  8.308e-03  -3.422 0.000629 ***
+ec_county         -6.386e-02  1.005e-02  -6.352 2.47e-10 ***
+POP_DEN_16         3.473e-07  5.120e-07   0.678 0.497596    
+UNE_16             2.281e-04  7.647e-04   0.298 0.765532    
+EDU1_16            3.183e-03  2.290e-04  13.903  &lt; 2e-16 ***
+R_BLACK_16        -5.783e-04  1.009e-04  -5.731 1.10e-08 ***
+SEX_RATIO          1.749e-04  7.790e-05   2.245 0.024849 *  
+AGE_DEP_YOUNG     -1.553e-03  1.745e-04  -8.900  &lt; 2e-16 ***
+MARRIED            2.087e-03  2.030e-04  10.280  &lt; 2e-16 ***
+factor(S_ID)AR     2.187e-02  7.245e-03   3.019 0.002556 ** 
+factor(S_ID)AZ    -3.057e-02  1.281e-02  -2.387 0.017064 *  
+factor(S_ID)CA    -1.600e-02  8.324e-03  -1.922 0.054706 .  
+factor(S_ID)CO     1.633e-02  8.324e-03   1.961 0.049950 *  
+factor(S_ID)CT     5.147e-02  1.625e-02   3.168 0.001550 ** 
+factor(S_ID)DC     1.183e-01  4.307e-02   2.747 0.006045 ** 
+factor(S_ID)DE     2.088e-03  2.499e-02   0.084 0.933402    
+factor(S_ID)FL     6.282e-03  7.536e-03   0.834 0.404544    
+factor(S_ID)GA    -1.934e-02  6.273e-03  -3.082 0.002072 ** 
+factor(S_ID)HI     1.009e-01  2.525e-02   3.998 6.56e-05 ***
+factor(S_ID)IA     1.348e-01  7.508e-03  17.948  &lt; 2e-16 ***
+factor(S_ID)ID     4.319e-03  8.939e-03   0.483 0.629055    
+factor(S_ID)IL     7.179e-02  7.167e-03  10.018  &lt; 2e-16 ***
+factor(S_ID)IN     6.317e-02  7.344e-03   8.601  &lt; 2e-16 ***
+factor(S_ID)KS     2.769e-02  7.420e-03   3.732 0.000193 ***
+factor(S_ID)KY     1.956e-02  7.017e-03   2.787 0.005348 ** 
+factor(S_ID)LA     1.603e-02  7.608e-03   2.107 0.035196 *  
+factor(S_ID)MA     2.346e-02  1.305e-02   1.798 0.072214 .  
+factor(S_ID)MD     1.987e-02  1.045e-02   1.902 0.057210 .  
+factor(S_ID)ME     4.986e-02  1.214e-02   4.107 4.12e-05 ***
+factor(S_ID)MI     5.307e-02  7.483e-03   7.093 1.65e-12 ***
+factor(S_ID)MN     1.077e-01  7.824e-03  13.771  &lt; 2e-16 ***
+factor(S_ID)MO     7.133e-02  7.056e-03  10.108  &lt; 2e-16 ***
+factor(S_ID)MS     3.776e-03  7.215e-03   0.523 0.600791    
+factor(S_ID)MT     4.769e-02  8.823e-03   5.405 7.01e-08 ***
+factor(S_ID)NC    -1.263e-03  6.774e-03  -0.186 0.852099    
+factor(S_ID)ND     1.291e-01  8.989e-03  14.358  &lt; 2e-16 ***
+factor(S_ID)NE     6.794e-02  7.868e-03   8.635  &lt; 2e-16 ***
+factor(S_ID)NH     4.295e-02  1.487e-02   2.888 0.003900 ** 
+factor(S_ID)NJ     4.975e-02  1.104e-02   4.505 6.91e-06 ***
+factor(S_ID)NM     1.251e-02  1.007e-02   1.242 0.214208    
+factor(S_ID)NV     3.822e-02  1.251e-02   3.055 0.002272 ** 
+factor(S_ID)NY     1.024e-01  8.122e-03  12.606  &lt; 2e-16 ***
+factor(S_ID)OH     1.023e-01  7.345e-03  13.930  &lt; 2e-16 ***
+factor(S_ID)OK     2.437e-02  7.579e-03   3.216 0.001316 ** 
+factor(S_ID)OR    -7.145e-04  9.271e-03  -0.077 0.938578    
+factor(S_ID)PA     5.045e-02  7.842e-03   6.433 1.46e-10 ***
+factor(S_ID)RI     4.456e-02  1.998e-02   2.230 0.025813 *  
+factor(S_ID)SC     4.179e-03  8.211e-03   0.509 0.610770    
+factor(S_ID)SD     9.407e-02  8.490e-03  11.080  &lt; 2e-16 ***
+factor(S_ID)TN     2.773e-02  7.001e-03   3.961 7.64e-05 ***
+factor(S_ID)TX    -5.642e-03  6.439e-03  -0.876 0.380967    
+factor(S_ID)UT    -5.760e-02  1.090e-02  -5.283 1.37e-07 ***
+factor(S_ID)VA     2.614e-02  7.226e-03   3.618 0.000302 ***
+factor(S_ID)VT     3.365e-02  1.286e-02   2.616 0.008938 ** 
+factor(S_ID)WA    -4.568e-03  9.039e-03  -0.505 0.613291    
+factor(S_ID)WI     8.458e-02  7.921e-03  10.678  &lt; 2e-16 ***
+factor(S_ID)WV     4.290e-02  8.106e-03   5.293 1.30e-07 ***
+factor(S_ID)WY     5.076e-02  1.086e-02   4.673 3.10e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.04224 on 2889 degrees of freedom
+  (67 observations deleted due to missingness)
+Multiple R-squared:  0.5863,    Adjusted R-squared:  0.5777 
+F-statistic: 68.23 on 60 and 2889 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
