@@ -196,7 +196,7 @@ summary(model20_5)
 **Figure 6** Correlation Matrix
 
 ```{r}
-data_trump3 <- select(data_trump2, MAR_T_new, INC_PC_16, GINI_16, Employment_Change, SC5_PCM_14, 
+data_trump3 <- select(data_trump2, MAR_T_new, INC_PC_16, GINI_16, EMP_AVE_CGR80_19, SC5_PCM_14, 
                      civic_organizations_county, volunteering_rate_county, clustering_county, 
                      support_ratio_county, ec_county, POP_DEN_16, UNE_16, EDU1_16, R_BLACK_16, 
                      SEX_RATIO, AGE_DEP_YOUNG, MARRIED)

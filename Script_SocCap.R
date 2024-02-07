@@ -61,7 +61,7 @@ model16_1 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + factor(S_ID), data = data_trum
 summary(model16_1)
 model16_3 <- lm(MAR_T_new ~ INC_PC_16 + SC5_PCM_14 + factor(S_ID), data = data_trump)
 summary(model16_3)
-model16_5 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + SC5_PCM_14 + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump)
+model16_5 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + SC5_PCM_14 + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump)
 summary(model16_5)
 
 # For 2020
@@ -69,7 +69,7 @@ model20_1 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + factor(S_ID), data = data_t
 summary(model20_1)
 model20_3 <- lm(MAR_T_20_new ~ INC_PC_16 + SC5_PCM_14 + factor(S_ID), data = data_trump)
 summary(model20_3)
-model20_5 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + SC5_PCM_14 + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump)
+model20_5 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + SC5_PCM_14 + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump)
 summary(model20_5)
 
 
@@ -78,38 +78,38 @@ summary(model20_5)
 # For 2016
 
 # Civic Engagement
-modelnew16_1 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew16_1 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew16_1)
-modelnew16_2 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew16_2 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew16_2)
 
 # Social Cohesion
-modelnew16_3 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew16_3 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew16_3)
-modelnew16_4 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew16_4 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew16_4)
 
 # Economic Connectedness
-modelnew16_5 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew16_5 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew16_5)
 
 
 # For 2020
 
 # Civic Engagement
-modelnew20_1 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew20_1 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew20_1)
-modelnew20_2 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew20_2 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew20_2)
 
 # Social Cohesion
-modelnew20_3 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew20_3 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew20_3)
-modelnew20_4 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew20_4 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew20_4)
 
 # Economic Connectedness
-modelnew20_5 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + Employment_Change + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelnew20_5 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
 summary(modelnew20_5)
 
 
@@ -260,22 +260,78 @@ ggplot(data = counties) +
 
 ##### 7. Interactions ##### 
 
-# For 2016
+# For 2016 Employment Change
 
 # Civic Engagement
-modelint16_1 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + Employment_Change*civic_organizations_county + factor(S_ID), data = data_trump2)
+modelint16_1 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
 summary(modelint16_1)
 
-modelnew16_2 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelint16_2 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
 summary(modelnew16_2)
 
 # Social Cohesion
-modelnew16_3 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelint16_3 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
 summary(modelnew16_3)
-modelnew16_4 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
+modelint16_4 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
 summary(modelnew16_4)
 
 # Economic Connectedness
-modelint16_5 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + Employment_Change + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + GINI_16*ec_county + factor(S_ID), data = data_trump2)
+modelint16_5 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
 summary(modelint16_5)
 
+# For 2016 Population Change
+
+# Civic Engagement
+modelint16_1pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
+summary(modelint16_1pop)
+
+modelnew16_2pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
+summary(modelnew16_2pop)
+
+# Social Cohesion
+modelnew16_3pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
+summary(modelnew16_3pop)
+modelnew16_4pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
+summary(modelnew16_4pop)
+
+# Economic Connectedness
+modelint16_5pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
+summary(modelint16_5pop)
+
+# For 2016 Average Earnings per Job Change
+
+# Civic Engagement
+modelint16_1ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
+summary(modelint16_1ear)
+
+modelnew16_2ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
+summary(modelnew16_2ear)
+
+# Social Cohesion
+modelnew16_3ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
+summary(modelnew16_3ear)
+modelnew16_4ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
+summary(modelnew16_4ear)
+
+# Economic Connectedness
+modelint16_5ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
+summary(modelint16_5ear)
+
+# For 2016 wages and salaries Change
+
+# Civic Engagement
+modelint16_1sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
+summary(modelint16_1sal)
+
+modelnew16_2sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
+summary(modelnew16_2sal)
+
+# Social Cohesion
+modelnew16_3sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
+summary(modelnew16_3sal)
+modelnew16_4sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
+summary(modelnew16_4sal)
+
+# Economic Connectedness
+modelint16_5sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
+summary(modelint16_5sal)
