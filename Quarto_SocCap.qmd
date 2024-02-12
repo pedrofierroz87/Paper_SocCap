@@ -27,21 +27,66 @@ This research delves into the complex interplay between social capital, territor
 Previous research has proposed that social capital could be a factor affecting the endorsement of anti-establishment narratives. Specifically, concerning the United States, evidence indicates that counties with higher levels of social capital were more inclined to endorse Donald Trump in both the 2016 and 2020 elections, especially when taking into account recent economic decline.
 
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
-library(ggplot2)
-library(tidyr)
-library(dplyr)
+library(tidyverse)
 library(sf)
 library(spdep)
 library(foreign)
-library(haven)
 library(car)
 library(broom)
 library(interactions)
 library(tigris)
 library(corrplot)
+library(ggthemes)
+library(patchwork)
+library(showtext)
+```
 
+# Set themes
 
-data_trump <- read_dta("Data_SocCap/Golfing_Trump.dta")
+Set font style
+
+```{r}
+# clean workspace
+rm(list=ls())
+# load font
+font_add_google("Roboto Condensed", "robotocondensed")
+# automatically use showtext to render text
+showtext_auto()
+```
+
+Theme for maps
+
+```{r}
+theme_map <- function(...) {
+  theme_tufte() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 22),
+    # legend
+    legend.title=element_text(size=12), 
+    legend.text=element_text(size=10),
+    # remove all axes
+    axis.text.x = element_blank(),
+    axis.text.y = element_blank(),
+    axis.ticks = element_blank(),
+    legend.position = "right"
+    )
+}
+```
+
+Theme for plots
+
+```{r}
+theme_tufte2 <- function(...) {
+  theme_tufte() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 24),
+    )
+}
+
+```
+
+```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+data_trump <- haven::read_dta("Data_SocCap/Golfing_Trump.dta")
 data_meta <- read.csv("Data_SocCap/social_capital_county.csv")
 
 # Creating variable for employment change 80-2016. Assuming EMP_AVE_80 and EMP_AVE_16 are the relevant variables
@@ -73,20 +118,21 @@ counties <- merge(data_trump2, counties, by.x = "FIPS_ID", by.y = "GEOID", all.x
 **Figure 1** US Presidential Elections 2016 and 2020 (county level)
 
 ```{r echo=FALSE}
-# Maping Margin Votes 2016
-ggplot(data = counties) +
-  geom_sf(aes(fill = MAR_T_new, geometry = geometry), color = "white", size = 0.5) +
+# Mapping Margin Votes 2016
+map2016 <- ggplot(data = counties) +
+  geom_sf(aes(fill = MAR_T_new, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "US Counties", option = "C") +
   labs(title = "Trump Margin 2016") +
-  theme_minimal()
+  theme_map()
 
-# Maping Margin Votes 2016
-ggplot(data = counties) +
-  geom_sf(aes(fill = MAR_T_20_new, geometry = geometry), color = "white", size = 0.5) +
+# Mapping Margin Votes 2020
+map2020 <- ggplot(data = counties) +
+  geom_sf(aes(fill = MAR_T_20_new, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "US Counties", option = "C") +
   labs(title = "Trump Margin 2020") +
-  theme_minimal()
+  theme_map()
 
+map2016 / map2020
 ```
 
 **Figure 2** Histograms of US Presidential Elections 2016 and 2020 (county level)
@@ -100,9 +146,9 @@ p <- ggplot() +
   # Histogram for MAR_T_20_new (2020)
   geom_histogram(data = data_trump, aes(x = MAR_T_20_new, y = ..density..), 
                  fill = "green", alpha = 0.5, bins = 70, color = "black") +
-  labs(title = "Comparison of Trump Margin: 2016 vs. 2020", 
+  labs(title = "Trump Margin: 2016 vs. 2020", 
        x = "Margin", y = "Frequency") +
-  theme_minimal() +
+  theme_tufte2() +
   # Adding a legend manually
   scale_fill_manual("", labels = c("2016", "2020"), values = c("blue", "green"))
 
@@ -115,44 +161,47 @@ Nonetheless, it's important to acknowledge that social capital is not a one-dime
 **Figure 3** Civic Engagement Dimension
 
 ```{r echo=FALSE}
-ggplot(data = counties) +
-  geom_sf(aes(fill = civic_organizations_county, geometry = geometry), color = "white", size = 0.5) +
+map_civorg <- ggplot(data = counties) +
+  geom_sf(aes(fill = civic_organizations_county, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "US Counties", option = "C") +
   labs(title = "Civic Organizations") +
-  theme_minimal()
+  theme_map()
 
-ggplot(data = counties) +
-  geom_sf(aes(fill = volunteering_rate_county, geometry = geometry), color = "white", size = 0.5) +
+map_vol <- ggplot(data = counties) +
+  geom_sf(aes(fill = volunteering_rate_county, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "US Counties", option = "C") +
   labs(title = "Volunteering Rate") +
-  theme_minimal()
+  theme_map()
+
+map_civorg / map_vol
 ```
 
 **Figure 4** Social Cohesion Dimension
 
 ```{r echo=FALSE}
-ggplot(data = counties) +
-  geom_sf(aes(fill = support_ratio_county, geometry = geometry), color = "white", size = 0.5) +
+map_sup <- ggplot(data = counties) +
+  geom_sf(aes(fill = support_ratio_county, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "US Counties", option = "C") +
   labs(title = "Support Networks") +
-  theme_minimal()
+  theme_map()
 
-ggplot(data = counties) +
-  geom_sf(aes(fill = clustering_county, geometry = geometry), color = "white", size = 0.5) +
+map_clu <-  ggplot(data = counties) +
+  geom_sf(aes(fill = clustering_county, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "US Counties", option = "C") +
   labs(title = "Friendship Clustering") +
-  theme_minimal()
+  theme_map()
 
+map_sup / map_clu
 ```
 
 **Figure 5** Economic Connectedness Dimension
 
 ```{r echo=FALSE}
 ggplot(data = counties) +
-  geom_sf(aes(fill = ec_county, geometry = geometry), color = "white", size = 0.5) +
+  geom_sf(aes(fill = ec_county, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "US Counties", option = "C") +
   labs(title = "Economic Connectedness") +
-  theme_minimal()
+  theme_map()
 ```
 
 As evident from the data, each dimension exhibits unique territorial patterns, which can potentially influence the inclination to endorse anti-establishment narratives in distinct ways. This is the aspect we aim to investigate further.
@@ -220,64 +269,64 @@ corrplot::corrplot(cormat, type="lower",
 
 ```{r echo=FALSE}
 ggplot(data_trump2, aes(x = SC5_PCM_14, y = MAR_T_new, size = POP_DEN_16)) +
-  geom_point(alpha = 0.5, color = "blue") +
-  geom_smooth(method = "lm", color = "red", se = TRUE) +  # Add linear regression line
+  geom_point(alpha = 0.5, color = "darkblue") +
+  geom_smooth(method = "lm", color = "#FDE725FF", se = TRUE) +  # Add linear regression line
   labs(title = "Scatter Plot with Linear Trend",
        x = "Social Capital",
        y = "Trump Margin") +  # Removed size label here as the legend is being removed
-  theme_minimal() +
+  theme_tufte2() +
   scale_size_continuous(range = c(1, 10)) +
   guides(size = FALSE)  # Remove the size legend
 
 
 ggplot(data_trump2, aes(x = civic_organizations_county, y = MAR_T_new, size = POP_DEN_16)) +
-  geom_point(alpha = 0.5, color = "blue") +
-  geom_smooth(method = "lm", color = "red", se = TRUE) +  # Add linear regression line
+  geom_point(alpha = 0.5, color = "darkblue") +
+  geom_smooth(method = "lm", color = "#FDE725FF", se = TRUE) +  # Add linear regression line
   labs(title = "Scatter Plot with Linear Trend",
        x = "Civic Organizations",
        y = "Trump Margin") +  # Removed size label here as the legend is being removed
-  theme_minimal() +
+  theme_tufte2() +
   scale_size_continuous(range = c(1, 10)) +
   guides(size = FALSE)  # Remove the size legend
 
 ggplot(data_trump2, aes(x = volunteering_rate_county, y = MAR_T_new, size = POP_DEN_16)) +
-  geom_point(alpha = 0.5, color = "blue") +
-  geom_smooth(method = "lm", color = "red", se = TRUE) +  # Add linear regression line
+  geom_point(alpha = 0.5, color = "darkblue") +
+  geom_smooth(method = "lm", color = "#FDE725FF", se = TRUE) +  # Add linear regression line
   labs(title = "Scatter Plot with Linear Trend",
        x = "Volunteering Rates",
        y = "Trump Margin") +  # Removed size label here as the legend is being removed
-  theme_minimal() +
+  theme_tufte2() +
   scale_size_continuous(range = c(1, 10)) +
   guides(size = FALSE)  # Remove the size legend
 
 ggplot(data_trump2, aes(x = clustering_county, y = MAR_T_new, size = POP_DEN_16)) +
-  geom_point(alpha = 0.5, color = "blue") +
-  geom_smooth(method = "lm", color = "red", se = TRUE) +  # Add linear regression line
+  geom_point(alpha = 0.5, color = "darkblue") +
+  geom_smooth(method = "lm", color = "#FDE725FF", se = TRUE) +  # Add linear regression line
   labs(title = "Scatter Plot with Linear Trend",
        x = "Friendship Clastering",
        y = "Trump Margin") +  # Removed size label here as the legend is being removed
-  theme_minimal() +
+  theme_tufte2() +
   scale_size_continuous(range = c(1, 10)) +
   guides(size = FALSE)  # Remove the size legend
 
 
 ggplot(data_trump2, aes(x = support_ratio_county, y = MAR_T_new, size = POP_DEN_16)) +
-  geom_point(alpha = 0.5, color = "blue") +
-  geom_smooth(method = "lm", color = "red", se = TRUE) +  # Add linear regression line
+  geom_point(alpha = 0.5, color = "darkblue") +
+  geom_smooth(method = "lm", color = "#FDE725FF", se = TRUE) +  # Add linear regression line
   labs(title = "Scatter Plot with Linear Trend",
        x = "Support Networks",
        y = "Trump Margin") +  # Removed size label here as the legend is being removed
-  theme_minimal() +
+  theme_tufte2() +
   scale_size_continuous(range = c(1, 10)) +
   guides(size = FALSE)  # Remove the size legend
 
 ggplot(data_trump2, aes(x = ec_county, y = MAR_T_new, size = POP_DEN_16)) +
-  geom_point(alpha = 0.5, color = "blue") +
-  geom_smooth(method = "lm", color = "red", se = TRUE) +  # Add linear regression line
+  geom_point(alpha = 0.5, color = "darkblue") +
+  geom_smooth(method = "lm", color = "#FDE725FF", se = TRUE) +  # Add linear regression line
   labs(title = "Scatter Plot with Linear Trend",
        x = "Economic Connectedness",
        y = "Trump Margin") +  # Removed size label here as the legend is being removed
-  theme_minimal() +
+  theme_tufte2() +
   scale_size_continuous(range = c(1, 10)) +
   guides(size = FALSE)  # Remove the size legend
 ```
