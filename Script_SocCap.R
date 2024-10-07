@@ -451,3 +451,14 @@ summary(modelint20_4sal)
 modelint20_5sal <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
 summary(modelint20_5sal)
 
+
+
+
+
+
+############## CODE ROWE ##############
+plot_models(modelnew16_1, modelnew16_2,
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Income per capita (2016)", "Inequality (Gini 2016)", "Employment change (1980-2016)", "Social Capital Community", "Density (2016)", "Unemployment rate (2016)", "Education (2016)", "Share of black population (2016)", "Sex ratio, males (2016)", "Age dependency, young (2016)", "Share Married (2016)")
+)
