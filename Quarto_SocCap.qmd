@@ -737,79 +737,251 @@ dev.off()
 # For 2016 Employment Change
 
 # Civic Engagement
-modelint16_1 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
-summary(modelint16_1)
+modelint16_1 <- data_trump2 %>% rename(
+   social_community = civic_organizations_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
 
-modelint16_2 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
-summary(modelint16_2)
+
+modelint16_2 <- data_trump2 %>% rename(
+   social_community = volunteering_rate_county
+   ) %>%
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Social Cohesion
-modelint16_3 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
-summary(modelint16_3)
-modelint16_4 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
-summary(modelint16_4)
+modelint16_3 <- data_trump2 %>% rename(
+   social_community = clustering_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
+
+modelint16_4 <- data_trump2 %>% rename(
+   social_community = support_ratio_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Economic Connectedness
-modelint16_5 <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
-summary(modelint16_5)
+modelint16_5 <- data_trump2 %>% rename(
+   social_community = ec_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
 
 # For 2016 Population Change
 
 # Civic Engagement
-modelint16_1pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
-summary(modelint16_1pop)
+modelint16_1pop <- data_trump2 %>% rename(
+   social_community = civic_organizations_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
 
-modelint16_2pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
-summary(modelint16_2pop)
+modelint16_2pop <- data_trump2 %>% rename(
+   social_community = volunteering_rate_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Social Cohesion
-modelint16_3pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
-summary(modelint16_3pop)
-modelint16_4pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
-summary(modelint16_4pop)
+modelint16_3pop <- data_trump2 %>% rename(
+   social_community = clustering_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
+
+modelint16_4pop <- data_trump2 %>% rename(
+   social_community = support_ratio_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Economic Connectedness
-modelint16_5pop <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
-summary(modelint16_5pop)
+modelint16_5pop <- data_trump2 %>% rename(
+   social_community = ec_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
 
 # For 2016 Average Earnings per Job Change
 
 # Civic Engagement
-modelint16_1ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
-summary(modelint16_1ear)
+modelint16_1ear <- data_trump2 %>% rename(
+   social_community = civic_organizations_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
 
-modelint16_2ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
-summary(modelint16_2ear)
+modelint16_2ear <- data_trump2 %>% rename(
+   social_community = volunteering_rate_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Social Cohesion
-modelint16_3ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
-summary(modelint16_3ear)
-modelint16_4ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
-summary(modelint16_4ear)
+modelint16_3ear <- data_trump2 %>% rename(
+   social_community = clustering_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
+
+modelint16_4ear <- data_trump2 %>% rename(
+   social_community = support_ratio_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
+
 
 # Economic Connectedness
-modelint16_5ear <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
-summary(modelint16_5ear)
+modelint16_5ear <- data_trump2 %>% rename(
+   social_community = ec_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
 
 # For 2016 wages and salaries Change
 
 # Civic Engagement
-modelint16_1sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
-summary(modelint16_1sal)
+modelint16_1sal <- data_trump2 %>% rename(
+   social_community =civic_organizations_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
 
-modelint16_2sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
-summary(modelint16_2sal)
+modelint16_2sal <- data_trump2 %>% rename(
+   social_community = volunteering_rate_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Social Cohesion
-modelint16_3sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
-summary(modelint16_3sal)
-modelint16_4sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
-summary(modelint16_4sal)
+modelint16_3sal <- data_trump2 %>% rename(
+   social_community = clustering_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
+
+
+modelint16_4sal <- data_trump2 %>% rename(
+   social_community = support_ratio_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
+
 
 # Economic Connectedness
-modelint16_5sal <- lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
-summary(modelint16_5sal)
+modelint16_5sal <- data_trump2 %>% rename(
+   social_community = ec_county
+   ) %>% 
+  lm(MAR_T_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
 
+```
+
+```{r}
+plot_models(modelint16_1, modelint16_2, modelint16_3, modelint16_4, modelint16_5,
+            title = "",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Employment change*SSC", "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community (SCC)", "Employment change (1980-2019)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  #scale_fill_discrete(name = "Dose", labels = c("A", "B")) +
+  # scale_color_discrete(labels = c("Civic organization", "Volunteering rate", "Frienship clustering", "Support network", "Economic connectedness")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+
+png(filename = "./output/model-em-interaction-coef_2016.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
+```
+
+
+
+```{r}
+plot_models(modelint16_1pop, modelint16_2pop, modelint16_3pop, modelint16_4pop, modelint16_5pop,
+            title = "",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Population change*SSC", "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community (SCC)", "Population change (1980-2019)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+
+png(filename = "./output/model-pc-interaction-coef_2016.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
+```
+
+```{r}
+plot_models(modelint16_1ear, modelint16_2ear, modelint16_3ear, modelint16_4ear, modelint16_5ear,
+            title = "",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Ave. Earnings*SSC", "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community (SCC)", "Ave. Earnings per job change (1980-2019)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+
+png(filename = "./output/model-earchange-interaction-coef_2016.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
+```
+
+```{r}
+plot_models(modelint16_1sal, modelint16_2sal, modelint16_3sal, modelint16_4sal, modelint16_5sal,
+            title = "",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Ave. Wage*SSC", "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community (SCC)", "Ave. wages (1980-2019)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+
+png(filename = "./output/model-wagechange-interaction-coef_2016.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
 ```
 
 **Table 4** Interactions between social capital and economic change, 2020 elections.
@@ -818,76 +990,252 @@ summary(modelint16_5sal)
 # For 2020 Employment Change
 
 # Civic Engagement
-modelint20_1 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
-summary(modelint20_1)
+modelint20_1 <- data_trump2 %>% rename(
+   social_community = civic_organizations_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
 
-modelint20_2 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
-summary(modelint20_2)
+modelint20_2 <- data_trump2 %>% rename(
+   social_community = volunteering_rate_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Social Cohesion
-modelint20_3 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
-summary(modelint20_3)
-modelint20_4 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
-summary(modelint20_4)
+modelint20_3 <- data_trump2 %>% rename(
+   social_community =clustering_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
+
+
+modelint20_4 <- data_trump2 %>% rename(
+   social_community = support_ratio_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Economic Connectedness
-modelint20_5 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
-summary(modelint20_5)
+modelint20_5 <- data_trump2 %>% rename(
+   social_community = ec_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EMP_AVE_CGR80_19*social_community + factor(S_ID), data = .)
 
 # For 2020 Population Change
 
 # Civic Engagement
-modelint20_1pop <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
-summary(modelint20_1pop)
+modelint20_1pop <- data_trump2 %>% rename(
+   social_community = civic_organizations_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
 
-modelint20_2pop <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
-summary(modelint20_2pop)
+modelint20_2pop <- data_trump2 %>% rename(
+   social_community = volunteering_rate_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Social Cohesion
-modelint20_3pop <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
-summary(modelint20_3pop)
-modelint20_4pop <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
-summary(modelint20_4pop)
+modelint20_3pop <- data_trump2 %>% rename(
+   social_community = clustering_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
+
+modelint20_4pop <- data_trump2 %>% rename(
+   social_community = support_ratio_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Economic Connectedness
-modelint20_5pop <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
-summary(modelint20_5pop)
+modelint20_5pop <- data_trump2 %>% rename(
+   social_community = ec_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + POP_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + POP_CGR80_19*social_community + factor(S_ID), data = .)
 
 # For 2020 Average Earnings per Job Change
 
 # Civic Engagement
-modelint20_1ear <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
-summary(modelint20_1ear)
+modelint20_1ear <-  data_trump2 %>% rename(
+   social_community = civic_organizations_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
 
-modelint20_2ear <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
-summary(modelint20_2ear)
+modelint20_2ear <- data_trump2 %>% rename(
+   social_community = volunteering_rate_county
+   ) %>% 
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Social Cohesion
-modelint20_3ear <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
-summary(modelint20_3ear)
-modelint20_4ear <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
-summary(modelint20_4ear)
+modelint20_3ear <- data_trump2 %>% rename(
+   social_community = clustering_county
+   ) %>% 
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
+
+
+modelint20_4ear <- data_trump2 %>% rename(
+   social_community = support_ratio_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Economic Connectedness
-modelint20_5ear <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
-summary(modelint20_5ear)
+modelint20_5ear <- data_trump2 %>% rename(
+   social_community = ec_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EAR_AVE_JOB_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + EAR_AVE_JOB_CGR80_19*social_community + factor(S_ID), data = .)
 
 # For 2020 wages and salaries Change
 
 # Civic Engagement
-modelint20_1sal <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*civic_organizations_county + factor(S_ID), data = data_trump2)
-summary(modelint20_1sal)
+modelint20_1sal <- data_trump2 %>% rename(
+   social_community = civic_organizations_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
 
-modelint20_2sal <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*volunteering_rate_county + factor(S_ID), data = data_trump2)
-summary(modelint20_2sal)
+
+modelint20_2sal <- data_trump2 %>% rename(
+   social_community = volunteering_rate_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
 
 # Social Cohesion
-modelint20_3sal <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*clustering_county + factor(S_ID), data = data_trump2)
-summary(modelint20_3sal)
-modelint20_4sal <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*support_ratio_county + factor(S_ID), data = data_trump2)
-summary(modelint20_4sal)
+modelint20_3sal <- data_trump2 %>% rename(
+   social_community = clustering_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
+
+
+modelint20_4sal <- data_trump2 %>% rename(
+   social_community = support_ratio_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
+
 
 # Economic Connectedness
-modelint20_5sal <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
-summary(modelint20_5sal)
+modelint20_5sal <- data_trump2 %>% rename(
+   social_community = ec_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*social_community + factor(S_ID), data = .)
+
+```
+
+```{r}
+plot_models(modelint20_1, modelint20_2, modelint20_3, modelint20_4, modelint20_5,
+            title = "",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Employment change*SSC", "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community (SCC)", "Employment change (1980-2019)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  #scale_fill_discrete(name = "Dose", labels = c("A", "B")) +
+  # scale_color_discrete(labels = c("Civic organization", "Volunteering rate", "Frienship clustering", "Support network", "Economic connectedness")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+
+png(filename = "./output/model-em-interaction-coef_2020.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
+```
+
+
+
+
+
+```{r}
+plot_models(modelint20_1pop, modelint20_2pop, modelint20_3pop, modelint20_4pop, modelint20_5pop,
+            title = "",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Population change*SSC", "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community (SCC)", "Population change (1980-2019)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+
+png(filename = "./output/model-pc-interaction-coef_2020.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
+```
+
+```{r}
+plot_models(modelint20_1ear, modelint20_2ear, modelint20_3ear, modelint20_4ear, modelint20_5ear,
+            title = "",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Ave. Earnings*SSC", "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community (SCC)", "Ave. Earnings per job change (1980-2019)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+
+png(filename = "./output/model-earchange-interaction-coef_2020.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
+```
+
+```{r}
+plot_models(modelint20_1sal, modelint20_2sal, modelint20_3sal, modelint20_4sal, modelint20_5sal, 
+            title = "",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Ave. Wage*SSC", "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community (SCC)", "Ave. wages (1980-2019)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+
+png(filename = "./output/model-wagechange-interaction-coef_2020.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
 ```
