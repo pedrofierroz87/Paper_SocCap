@@ -10,16 +10,12 @@ Pedro Fierro, Francisco Rowe, Andrés Rodríguez-Pose and Ellen Helsper
 
 ## Abstract
 
-Social capital has traditionally been viewed as a fundamental driver of democratic vitality. However, since the late-20th century, it has been suggested that social capital may also have adverse effects, potentially fostering totalitarian and populist ideologies. This paper examines the political implications of two different types of social capital —bonding social capital and bridging social capital—, using the 2016 and 2020 U.S. presidential elections as a case study.  By examining at the county level, we find that the impact of social capital on antisystem voting behaviour is contingent upon the type of social capital involved. Bonding social capital, characterised by close-knit, homogeneous networks, is positively correlated with antisystem behaviours, as proxied by the additional electoral support for Donald Trump. In contrast, bridging social capital, which involves connections across diverse social groups, shows a negative correlation. Furthermore, our analysis reveals a complex interaction between economic and demographic changes, social integration, and political tendencies in a period of economic transition. These findings underscore the multifaceted nature of social capital and its critical role in understanding its origins and effects. 
+Social capital has traditionally been viewed as a fundamental driver of democratic vitality. However, since the late-20th century, it has been suggested that social capital may also have adverse effects, potentially fostering totalitarian and populist ideologies. This paper examines the political implications of two different types of social capital ---bonding social capital and bridging social capital---, using the 2016 and 2020 U.S. presidential elections as a case study. By examining at the county level, we find that the impact of social capital on antisystem voting behaviour is contingent upon the type of social capital involved. Bonding social capital, characterised by close-knit, homogeneous networks, is positively correlated with antisystem behaviours, as proxied by the additional electoral support for Donald Trump. In contrast, bridging social capital, which involves connections across diverse social groups, shows a negative correlation. Furthermore, our analysis reveals a complex interaction between economic and demographic changes, social integration, and political tendencies in a period of economic transition. These findings underscore the multifaceted nature of social capital and its critical role in understanding its origins and effects.
 
 ## INTRODUCTION
 
-Social capital has long been recognised as a crucial element in assessing the health and vitality of democratic systems and society at large. In recent years, concerns have grown over the health of democracy as voters across the democratic world increasingly turn to populist and/or anti-options. In electoral terms, social capital has been viewed as a catalyst for political engagement and voting behaviours, primarily through its influence on civic participation and trust (Coleman, 1988; Putnam, 1995, 2000). Yet, although social capital is typically seen as a positive counterforce against populist movements, some studies have highlighted its dual nature, suggesting that under certain conditions, high levels of social capital might foster anti-establishment sentiments (Fitzgerald & Lawrence, 2011; Rodríguez-Pose et al., 2021), and could be at the centre of the rise of the populist wave gripping many Western countries. 
-Foundational studies of social capital reveal that the concept extends beyond a single dimension, comprising a variety of indicators that impact different aspects of social capital. This research adopts the well-known distinction between bonding and bridging social capital, hypothesising that each type of social capital has distinct effects on voting preferences of individuals. The aim is to explore the roles of different forms of social capital in either reinforcing or undermining electoral support for anti-establishment narratives in specific settings.  
-Drawing on data from the META database and employing the methodologies recently developed by Chetty et al. (Chetty et al., 2022a, 2022b), we conceptualise social capital across three dimensions: a) social connectedness, which gauges interactions among individuals from diverse socioeconomic backgrounds; b) social cohesion, which is characterised by clusters of friendships and social networks; and c) civic engagement, which is denoted by volunteering rates and the presence of civic organisations within a community. Social cohesion and civic engagement are indicative of bonding social capital, strengthening networks within homogeneous communities. Conversely, social connectedness represents bridging social capital, characterised by diversity and interactions between different communities. 
-Recent research suggests that the rise of antisystem narratives can often be traced back to persistent economic and demographic decline in areas with high levels of social capital (e.g. Rodríguez-Pose et al., 2024). We, however, posit that, although economic decline is a crucial driver of electoral support for more extreme options, this electoral support is fundamentally mediated by the relevance and type of social capital prevalent in each territory. Support for more extreme political options will differ depending on the specific type of social capital in question. Using Donald Trump’s electoral performance in the 2016 and 2020 presidential elections as a case study, the findings of the analysis validate the hypotheses: bonding social capital is positively associated with Trump’s vote margins —serving as a proxy for the rise of antisystem behaviours in the US— whereas the presence of bridging social capital shows a negative correlation with additional support for Donald Trump. Thus, it is not all dimensions of social capital that predispose a community to antisystem political action, but rather the presence of local, homogeneous networks.
-The article proceeds as follows: first, we examine the relationship between social capital and antisystem stances, followed by a discussion on the multidimensional nature of social capital. The methodology section then elaborates on the data and measures employed, outlining the analytical strategy adopted. Subsequently, we present and discuss the results of the empirical analysis, culminating in a conclusion that considers future research avenues and acknowledges the study's limitations. 
-Through this research, we explore the complex interplay between social capital, territorial disparities, and support for antisystem narratives. By distinguishing between bonding and bridging connections, our aim is to unravel the influence of social capital on political dynamics across diverse territories. 
+Social capital has long been recognised as a crucial element in assessing the health and vitality of democratic systems and society at large. In recent years, concerns have grown over the health of democracy as voters across the democratic world increasingly turn to populist and/or anti-options. In electoral terms, social capital has been viewed as a catalyst for political engagement and voting behaviours, primarily through its influence on civic participation and trust (Coleman, 1988; Putnam, 1995, 2000). Yet, although social capital is typically seen as a positive counterforce against populist movements, some studies have highlighted its dual nature, suggesting that under certain conditions, high levels of social capital might foster anti-establishment sentiments (Fitzgerald & Lawrence, 2011; Rodríguez-Pose et al., 2021), and could be at the centre of the rise of the populist wave gripping many Western countries. Foundational studies of social capital reveal that the concept extends beyond a single dimension, comprising a variety of indicators that impact different aspects of social capital. This research adopts the well-known distinction between bonding and bridging social capital, hypothesising that each type of social capital has distinct effects on voting preferences of individuals. The aim is to explore the roles of different forms of social capital in either reinforcing or undermining electoral support for anti-establishment narratives in specific settings.\
+Drawing on data from the META database and employing the methodologies recently developed by Chetty et al. (Chetty et al., 2022a, 2022b), we conceptualise social capital across three dimensions: a) social connectedness, which gauges interactions among individuals from diverse socioeconomic backgrounds; b) social cohesion, which is characterised by clusters of friendships and social networks; and c) civic engagement, which is denoted by volunteering rates and the presence of civic organisations within a community. Social cohesion and civic engagement are indicative of bonding social capital, strengthening networks within homogeneous communities. Conversely, social connectedness represents bridging social capital, characterised by diversity and interactions between different communities. Recent research suggests that the rise of antisystem narratives can often be traced back to persistent economic and demographic decline in areas with high levels of social capital (e.g. Rodríguez-Pose et al., 2024). We, however, posit that, although economic decline is a crucial driver of electoral support for more extreme options, this electoral support is fundamentally mediated by the relevance and type of social capital prevalent in each territory. Support for more extreme political options will differ depending on the specific type of social capital in question. Using Donald Trump's electoral performance in the 2016 and 2020 presidential elections as a case study, the findings of the analysis validate the hypotheses: bonding social capital is positively associated with Trump's vote margins ---serving as a proxy for the rise of antisystem behaviours in the US--- whereas the presence of bridging social capital shows a negative correlation with additional support for Donald Trump. Thus, it is not all dimensions of social capital that predispose a community to antisystem political action, but rather the presence of local, homogeneous networks. The article proceeds as follows: first, we examine the relationship between social capital and antisystem stances, followed by a discussion on the multidimensional nature of social capital. The methodology section then elaborates on the data and measures employed, outlining the analytical strategy adopted. Subsequently, we present and discuss the results of the empirical analysis, culminating in a conclusion that considers future research avenues and acknowledges the study's limitations. Through this research, we explore the complex interplay between social capital, territorial disparities, and support for antisystem narratives. By distinguishing between bonding and bridging connections, our aim is to unravel the influence of social capital on political dynamics across diverse territories.
 
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -35,6 +31,7 @@ library(ggthemes)
 library(patchwork)
 library(showtext)
 library(scico)
+library(sjPlot)
 ```
 
 # Set themes
@@ -326,7 +323,7 @@ summary(model16_5)
 tidy_model_filtered <- tidy(model16_5) %>%
   filter(term == "SC5_PCM_14")
 
-tidy_model_filtered$term <- ifelse(tidy_model_filtered$term == "SC5_PCM_14", "Comprehensive Social Capital", tidy_model_filtered$term)
+tidy_model_filtered$term <- ifelse(tidy_model_filtered$term == "SC5_PCM_14", "2016", tidy_model_filtered$term)
 
 # Create the coefficient plot with updated term labels
 ggplot(tidy_model_filtered, aes(x = term, y = estimate)) +
@@ -338,7 +335,6 @@ ggplot(tidy_model_filtered, aes(x = term, y = estimate)) +
   theme_minimal()
 
 ```
-
 
 ```{r echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 # For 2020
@@ -359,7 +355,7 @@ summary(model20_5)
 tidy_model20_filtered <- tidy(model20_5) %>%
   filter(term == "SC5_PCM_14")
 
-tidy_model20_filtered$term <- ifelse(tidy_model20_filtered$term == "SC5_PCM_14", "Comprehensive Social Capital", tidy_model20_filtered$term)
+tidy_model20_filtered$term <- ifelse(tidy_model20_filtered$term == "SC5_PCM_14", "2020", tidy_model20_filtered$term)
 
 # Create the coefficient plot with updated term labels
 ggplot(tidy_model20_filtered, aes(x = term, y = estimate)) +
@@ -371,6 +367,28 @@ ggplot(tidy_model20_filtered, aes(x = term, y = estimate)) +
   theme_minimal()
 ```
 
+```{r}
+# combined
+tidy_model1_filtered <-rbind(tidy_model_filtered, tidy_model20_filtered) 
+
+# Create the coefficient plot with updated term labels
+ggplot(tidy_model1_filtered, aes(x = term, y = estimate)) +
+  geom_errorbar(aes(colour = term, ymin = estimate - std.error, ymax = estimate + std.error), width = .1, linewidth = 1) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray50", size = 1) +  # Add horizontal line which becomes vertical after coord_flip
+  geom_point( aes(colour = term), size = 5) +
+  coord_flip() +  # Make plot horizontal
+  scale_color_aaas() + # Change colour palettes
+  scale_fill_aaas() +
+  labs(title = "Comprehensive social capital", x = "Year", y = "Estimate") +
+  theme_tufte2()
+
+```
+
+```{r}
+png(filename = "./output/model1-coef.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
+```
 
 ### Second Part: Replicating Classic Models with META Data
 
@@ -548,24 +566,167 @@ modelnew16_5 <- data_trump2 %>% rename(
 summary(modelnew16_5)
 ```
 
+
+```{r}
+plot_models(modelnew16_1, modelnew16_2, 
+            title = "Civic engagement",
+            legend.title = "",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            # axis.labels = c(
+            #   "Income per capita (2016)", "Inequality (Gini 2016)", "Employment change (1980-2016)", "Social Capital Community", "Density (2016)", "Unemployment rate (2016)", "Education (2016)", "Share of black population (2016)", "Sex ratio, males (2016)", "Age dependency, young (2016)", "Share Married (2016)")
+            axis.labels = c(
+              "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community", "Employment change (1980-2016)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  #scale_fill_discrete(name = "Dose", labels = c("A", "B")) +
+  scale_color_discrete(labels = c("Civic organization", "Volunteering rate")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 14),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "bottom"
+  )
+civic_eng <- last_plot()
+```
+
+```{r}
+plot_models(modelnew16_3, modelnew16_4, 
+            title = "Social cohesion",
+            legend.title = "",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community", "Employment change (1980-2016)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  #scale_fill_discrete(name = "Dose", labels = c("A", "B")) +
+  scale_color_discrete(labels = c("Frienship clustering", "Support network")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 14),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "bottom"
+  )
+social_coh <- last_plot()
+```
+```{r}
+plot_models(modelnew16_1, modelnew16_2, modelnew16_3, modelnew16_4, modelnew16_5,
+            title = "2016",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community", "Employment change (1980-2016)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  #scale_fill_discrete(name = "Dose", labels = c("A", "B")) +
+  # scale_color_discrete(labels = c("Civic organization", "Volunteering rate", "Frienship clustering", "Support network", "Economic connectedness")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+social_coh <- last_plot()
+```
+
+
+```{r}
+png(filename = "./output/model-coef_social-capital_2016.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
+```
+
+Note: this is the original plot and should not be reported.
+```{r}
+plot_models(modelnew16_1, modelnew16_2, modelnew16_3, modelnew16_4, modelnew16_5,
+            title = NULL,
+            legend.title = "",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community", "Employment change (1980-2016)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+)
+```
+
+
 **Table 2** Basic model for Trump Margin 2020, with META data
 
 ```{r}
 # Civic Engagement
-modelnew20_1 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + civic_organizations_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
-summary(modelnew20_1)
-modelnew20_2 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + volunteering_rate_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
-summary(modelnew20_2)
+modelnew20_1 <- data_trump2 %>% rename(
+   social_community = civic_organizations_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = .)
+
+modelnew20_2 <- data_trump2 %>% rename(
+   social_community = volunteering_rate_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = .)
 
 # Social Cohesion
-modelnew20_3 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + clustering_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
-summary(modelnew20_3)
-modelnew20_4 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + support_ratio_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
-summary(modelnew20_4)
+modelnew20_3 <- data_trump2 %>% rename(
+   social_community = clustering_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = .)
+
+modelnew20_4 <- data_trump2 %>% rename(
+   social_community = support_ratio_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = .)
 
 # Economic Connectedness
-modelnew20_5 <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = data_trump2)
-summary(modelnew20_5)
+modelnew20_5 <- data_trump2 %>% rename(
+   social_community = ec_county
+   ) %>%
+  lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = .)
+```
+
+```{r}
+plot_models(modelnew20_1, modelnew20_2, modelnew20_3, modelnew20_4, modelnew20_5,
+            title = "2020",
+            legend.title = "",
+            spacing = .7,
+            std.est = "std2",
+            line.size = 1,
+            vline.color = "grey85",
+            rm.terms = "factor(S_ID) [AL,AZ,AR,CA,CO,CT,DE,DC,FL,GA,HI,ID,IL,IN,IA,KS,KY,LA,ME,MD,MA,MI,MN,MS,MO,MT,NE,NV,NH,NJ,NM,NY,NC,ND,OH,OK,OR,PA,RI,SC,SD,TN,TX,UT,VT,VA,WA,WV,WI,WY]", 
+            axis.labels = c(
+              "Share Married (2016)", "Age dependency, young (2016)", "Sex ratio, males (2016)", "Share of black population (2016)", "Education (2016)", "Unemployment rate (2016)", "Density (2016)", "Social Capital Community", "Employment change (1980-2016)", "Inequality (Gini 2016)", "Income per capita (2016)"
+              )
+) + 
+  scale_color_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) + # Change colour palettes
+  scale_fill_npg(labels = c("Economic connectedness", "Support network", "Frienship clustering", "Volunteering rate", "Civic organization")) +
+  #scale_fill_discrete(name = "Dose", labels = c("A", "B")) +
+  # scale_color_discrete(labels = c("Civic organization", "Volunteering rate", "Frienship clustering", "Support network", "Economic connectedness")) +
+  theme_tufte2() +
+  theme(
+    text = element_text(family = "robotocondensed", size = 18),
+    plot.title = element_text(size = 25),
+    # legend
+    legend.title=element_text(size=15), 
+    legend.text=element_text(size=14),
+    legend.position = "right"
+  )
+social_coh <- last_plot()
+```
+```{r}
+png(filename = "./output/model-coef_social-capital_2020.png", units="in", width=8, height=8, res=300, bg = "white")
+  last_plot()
+dev.off()
 ```
 
 ### Third Part: Intractions Models with META Data
@@ -730,4 +891,3 @@ summary(modelint20_4sal)
 modelint20_5sal <- lm(MAR_T_20_new ~ INC_PC_16 + GINI_16 + WA_SA_MEA_CGR80_19 + ec_county + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + WA_SA_MEA_CGR80_19*ec_county + factor(S_ID), data = data_trump2)
 summary(modelint20_5sal)
 ```
-
