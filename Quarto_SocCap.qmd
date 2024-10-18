@@ -197,7 +197,7 @@ Nonetheless, it's important to acknowledge that social capital is not a one-dime
 ```{r echo=FALSE}
 map_civorg <- ggplot(data = counties) +
   geom_sf(aes(fill = civic_organizations_county, geometry = geometry), color = "transparent", size = 0.5) +
-  scale_fill_viridis_c(name = "Public for good Facebook pages per 1,000 users", 
+  scale_fill_viridis_c(name = "Public good Facebook pages per 1,000 users", 
                        option = "C",
                        guide = guide_colorbar(title.position="top")) +
   labs(title = "Civic Organizations") +
