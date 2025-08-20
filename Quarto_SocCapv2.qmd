@@ -659,8 +659,8 @@ interact_plot(modelint16_3,
               modx = clustering_county_c,
               data = data_trump2,
               interval = TRUE,
-              main.title = "Job Earnings Growth x Clustering",
-              x.label = "Job Earnings Growth",
+              main.title = "Earnings Growth x Clustering",
+              x.label = "Earnings Growth",
               y.label = "Predicted Trump's Margin",
               legend.main = "Clustering")
 
@@ -692,8 +692,8 @@ interact_plot(modelint16_4,
               modx = support_ratio_county_c,
               data = data_trump2,
               interval = TRUE,
-              main.title = "Job Earnings Growth x Support Networks",
-              x.label = "Job Earnings Growth",
+              main.title = "Earnings Growth x Support Networks",
+              x.label = "Earnings Growth",
               y.label = "Predicted Trump's Margin",
               legend.main = "Support Networks")
 
@@ -703,8 +703,8 @@ interact_plot(modelint16_4,
               modx = support_ratio_county_c,
               data = data_trump2,
               interval = TRUE,
-              main.title = "Wage-Salary Growth x Support Networks",
-              x.label = "Wage-Salary Growth",
+              main.title = "Wage Growth x Support Networks",
+              x.label = "Wage Growth",
               y.label = "Predicted Trump's Margin",
               legend.main = "Support Networks")
 
@@ -736,8 +736,8 @@ interact_plot(modelint16_5,
               modx = ec_county_c,
               data = data_trump2,
               interval = TRUE,
-              main.title = "Wage-Salary Growth x Econ. Connect.",
-              x.label = "Wage-Salary Growth",
+              main.title = "Wage Growth x Econ. Connect.",
+              x.label = "Wage Growth",
               y.label = "Predicted Trump's Margin",
               legend.main = "Econ. Connect.")
 
@@ -865,8 +865,8 @@ interact_plot(modelint20_4,
               modx = support_ratio_county_c,
               data = data_trump2,
               interval = TRUE,
-              main.title = "Average Earnings Growth × Support Networks",
-              x.label = "Average Earnings Growth (1980–2019)",
+              main.title = "Earnings Growth × Support Networks",
+              x.label = "Earnings Growth",
               y.label = "Predicted Trump's Margin (2020)",
               legend.main = "Support Networks")
 
@@ -876,7 +876,7 @@ interact_plot(modelint20_4,
               data = data_trump2,
               interval = TRUE,
               main.title = "Wages Growth × Support Networks",
-              x.label = "Wages Growth (1980–2019)",
+              x.label = "Wages Growth",
               y.label = "Predicted Trump's Margin (2020)",
               legend.main = "Support Networks")
 
@@ -889,6 +889,17 @@ interact_plot(modelint20_5,
               x.label = "Employment Growth",
               y.label = "Predicted Trump's Margin",
               legend.main = "Econ. Connect.")
+
+interact_plot(modelint20_5,
+              pred = EAR_AVE_JOB_CGR80_19_c,
+              modx = ec_county_c,
+              data = data_trump2,
+              interval = TRUE,
+              main.title = "Earnings Growth × Econ. Connect.",
+              x.label = "Earnings Growth",
+              y.label = "Predicted Trump's Margin",
+              legend.main = "Econ. Connect.")
+
 ```
 
 R&R
