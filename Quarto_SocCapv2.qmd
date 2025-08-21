@@ -116,7 +116,7 @@ summary(counties$GEOID)
 
 counties <- merge(data_trump2, counties, by.x = "FIPS_ID", by.y = "GEOID", all.x = FALSE, all.y = TRUE)
 
-states <- st_read("/Users/franciscorowe/Library/CloudStorage/Dropbox/Francisco/Research/in_progress/us-social-capital/Paper_SocCap/Shapefile_SocCap/gadm41_USA_shp/gadm41_USA_1.shp") %>% 
+states <- st_read("Shapefile_SocCap/gadm41_USA_shp/gadm41_USA_1.shp") %>% 
   filter(!NAME_1 %in% c("Alaska", "Hawaii"))  %>% 
   st_simplify(., # simplify boundaries for efficiency
               preserveTopology = T,
@@ -163,7 +163,7 @@ margin_map
 ```
 
 ```{r}
-png(filename = "./output/trump-margin1620.png", units="in", width=8, height=8, res=300, bg = "white")
+tiff(filename = "./output/Figure 1.tif", units="in", width=8, height=8, res=300, bg = "white")
   margin_map
 dev.off()
 ```
@@ -196,7 +196,7 @@ print(p)
 ```
 
 ```{r}
-png(filename = "./output/hist_trump-margin.png", units="in", width=10, height=8, res=300, bg = "white")
+tiff(filename = "./output/Figure 2.tif", units="in", width=10, height=8, res=300, bg = "white")
   p
 dev.off()
 ```
@@ -244,7 +244,7 @@ map_civorg / map_vol
 ```
 
 ```{r}
-png(filename = "./output/civic-engagement.png", units="in", width=8, height=8, res=300, bg = "white")
+tiff(filename = "./output/Figure 3.tif", units="in", width=8, height=8, res=300, bg = "white")
   map_civorg / map_vol
 dev.off()
 ```
@@ -290,7 +290,7 @@ map_sup / map_clu
 ```
 
 ```{r}
-png(filename = "./output/social-cohesion.png", units="in", width=8, height=8, res=300, bg = "white")
+tiff(filename = "./output/Figure 4.tif", units="in", width=8, height=8, res=300, bg = "white")
   map_sup / map_clu
 dev.off()
 ```
@@ -317,7 +317,7 @@ ggplot(data = counties) +
 ```
 
 ```{r}
-png(filename = "./output/economic-connectedness.png", units="in", width=8, height=6, res=300, bg = "white")
+tiff(filename = "./output/Figure 5.tif", units="in", width=8, height=6, res=300, bg = "white")
   last_plot()
 dev.off()
 ```
@@ -484,7 +484,7 @@ social_coh <- last_plot()
 ```
 
 ```{r}
-png(filename = "./output/model-coef_social-capital_2016.png", units="in", width=8, height=8, res=300, bg = "white")
+tiff(filename = "./output/model-coef_social-capital_2016.tif", units="in", width=8, height=8, res=300, bg = "white")
   last_plot()
 dev.off()
 ```
@@ -557,7 +557,7 @@ social_coh <- last_plot()
 ```
 
 ```{r}
-png(filename = "./output/model-coef_social-capital_2020.png", units="in", width=8, height=8, res=300, bg = "white")
+tiff(filename = "./output/model-coef_social-capital_2020.tif", units="in", width=8, height=8, res=300, bg = "white")
   last_plot()
 dev.off()
 ```
@@ -656,8 +656,13 @@ interact_plot(modelint16_1,
               interval = TRUE,
               main.title = "Population Growth x Organizations",
               x.label = "Population Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Organizations")
+
+tiff(filename = "./output/Figure 7_1.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
+
 
 interact_plot(modelint16_2,
               pred = EMP_AVE_CGR80_19_c,
@@ -666,8 +671,12 @@ interact_plot(modelint16_2,
               interval = TRUE,
               main.title = "Employment Growth x Volunteering Rate",
               x.label = "Employment Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Volunteering Rate")
+
+tiff(filename = "./output/Figure 7_2.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 # Interaction: EAR_AVE_JOB_CGR80_19_c * clustering_county_c
 interact_plot(modelint16_3,
@@ -677,8 +686,12 @@ interact_plot(modelint16_3,
               interval = TRUE,
               main.title = "Earnings Growth x Clustering",
               x.label = "Earnings Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Clustering")
+
+tiff(filename = "./output/Figure 7_3.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 # Interaction: POP_CGR80_19_c * clustering_county_c
 interact_plot(modelint16_3,
@@ -688,8 +701,12 @@ interact_plot(modelint16_3,
               interval = TRUE,
               main.title = "Population Growth x Clustering",
               x.label = "Population Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Clustering")
+
+tiff(filename = "./output/Figure 7_4.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 # Interaction: EMP_AVE_CGR80_19_c * support_ratio_county_c
 interact_plot(modelint16_4,
@@ -699,8 +716,12 @@ interact_plot(modelint16_4,
               interval = TRUE,
               main.title = "Employment Growth x Support Networks",
               x.label = "Employment Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Support Networks")
+
+tiff(filename = "./output/Figure 7_5.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 #Interaction: EAR_AVE_JOB_CGR80_19_c * support_ratio_county_c
 interact_plot(modelint16_4,
@@ -710,8 +731,12 @@ interact_plot(modelint16_4,
               interval = TRUE,
               main.title = "Earnings Growth x Support Networks",
               x.label = "Earnings Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Support Networks")
+
+tiff(filename = "./output/Figure 7_6.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 # Interaction: WA_SA_MEA_CGR80_19_c * support_ratio_county_c
 interact_plot(modelint16_4,
@@ -721,8 +746,12 @@ interact_plot(modelint16_4,
               interval = TRUE,
               main.title = "Wage Growth x Support Networks",
               x.label = "Wage Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Support Networks")
+
+tiff(filename = "./output/Figure 7_7.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 # Interaction: EMP_AVE_CGR80_19_c * ec_county_c
 interact_plot(modelint16_5,
@@ -732,8 +761,12 @@ interact_plot(modelint16_5,
               interval = TRUE,
               main.title = "Employment Growth x Econ. Connect.",
               x.label = "Employment Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Econ. Connect.")
+
+tiff(filename = "./output/Figure 7_8.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 # Interaction: POP_CGR80_19_c * ec_county_c
 interact_plot(modelint16_5,
@@ -743,8 +776,12 @@ interact_plot(modelint16_5,
               interval = TRUE,
               main.title = "Population Growth x Econ. Connect.",
               x.label = "Population Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Econ. Connect.")
+
+tiff(filename = "./output/Figure 7_9.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 # Interaction: WA_SA_MEA_CGR80_19_c * ec_county_c
 interact_plot(modelint16_5,
@@ -754,8 +791,12 @@ interact_plot(modelint16_5,
               interval = TRUE,
               main.title = "Wage Growth x Econ. Connect.",
               x.label = "Wage Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2016",
               legend.main = "Econ. Connect.")
+
+tiff(filename = "./output/Figure 7_10.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 ```
 
@@ -842,8 +883,12 @@ interact_plot(modelint20_2,
               interval = TRUE,
               main.title = "Employment Growth x Volunteering Rate",
               x.label = "Employment Growth",
-              y.label = "Predicted Trump's Margin (2020)",
+              y.label = "Predicted Trump's Margin 2020",
               legend.main = "Volunteering Rate")
+
+tiff(filename = "./output/Figure 8_1.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 interact_plot(modelint20_3,
               pred = EMP_AVE_CGR80_19_c,
@@ -852,8 +897,12 @@ interact_plot(modelint20_3,
               interval = TRUE,
               main.title = "Employment Growth × Clustering",
               x.label = "Employment Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2020",
               legend.main = "Clustering")
+
+tiff(filename = "./output/Figure 8_2.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 interact_plot(modelint20_3,
               pred = POP_CGR80_19_c,
@@ -862,8 +911,12 @@ interact_plot(modelint20_3,
               interval = TRUE,
               main.title = "Population Growth × Clustering",
               x.label = "Population Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2020",
               legend.main = "Clustering")
+
+tiff(filename = "./output/Figure 8_3.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 interact_plot(modelint20_4,
               pred = EMP_AVE_CGR80_19_c,
@@ -872,8 +925,12 @@ interact_plot(modelint20_4,
               interval = TRUE,
               main.title = "Employment Growth × Support Networks",
               x.label = "Employment Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2020",
               legend.main = "Support Networks")
+
+tiff(filename = "./output/Figure 8_4.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 interact_plot(modelint20_4,
               pred = EAR_AVE_JOB_CGR80_19_c,
@@ -882,8 +939,12 @@ interact_plot(modelint20_4,
               interval = TRUE,
               main.title = "Earnings Growth × Support Networks",
               x.label = "Earnings Growth",
-              y.label = "Predicted Trump's Margin (2020)",
+              y.label = "Predicted Trump's Margin 2020",
               legend.main = "Support Networks")
+
+tiff(filename = "./output/Figure 8_5.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 interact_plot(modelint20_4,
               pred = WA_SA_MEA_CGR80_19_c,
@@ -892,8 +953,12 @@ interact_plot(modelint20_4,
               interval = TRUE,
               main.title = "Wages Growth × Support Networks",
               x.label = "Wages Growth",
-              y.label = "Predicted Trump's Margin (2020)",
+              y.label = "Predicted Trump's Margin 2020",
               legend.main = "Support Networks")
+
+tiff(filename = "./output/Figure 8_6.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 interact_plot(modelint20_5,
               pred = EMP_AVE_CGR80_19_c,
@@ -902,8 +967,12 @@ interact_plot(modelint20_5,
               interval = TRUE,
               main.title = "Employment Growth × Econ. Connect.",
               x.label = "Employment Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2020",
               legend.main = "Econ. Connect.")
+
+tiff(filename = "./output/Figure 8_7.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 interact_plot(modelint20_5,
               pred = EAR_AVE_JOB_CGR80_19_c,
@@ -912,8 +981,12 @@ interact_plot(modelint20_5,
               interval = TRUE,
               main.title = "Earnings Growth × Econ. Connect.",
               x.label = "Earnings Growth",
-              y.label = "Predicted Trump's Margin",
+              y.label = "Predicted Trump's Margin 2020",
               legend.main = "Econ. Connect.")
+
+tiff(filename = "./output/Figure 8_8.tif", units="in", width=8, height=5, res=300, bg = "white")
+  last_plot()
+dev.off()
 
 ```
 
