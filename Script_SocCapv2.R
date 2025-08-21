@@ -473,7 +473,11 @@ presdata <- read.csv("Data_SocCap/Presidential_Results_1216.tab")
 
 
 # Calculate Compound Growth Rate (log difference divided by years)
-data_trump$POP_CGR80_19_calc <- (log(data_trump$POP_19) - log(data_trump$POP_80)) / (2019 - 1980)
+#data_trump$POP_CGR80_19_calc <- (log(data_trump$POP_19) - log(data_trump$POP_80)) / (2019 - 1980)
+
+data_trump$POP_CGR80_19_calc <- (
+  data_trump$POP_19 / data_trump$POP_80
+)^(1 / (2019 - 1980)) - 1
 
 # Check correlation between calculated and original CGR
 cor(data_trump$POP_CGR80_19_calc, data_trump$POP_CGR80_19, use = "complete.obs")
@@ -482,12 +486,21 @@ max(abs(data_trump$POP_CGR80_19_calc - data_trump$POP_CGR80_19), na.rm = TRUE)
 data_trump[1:10, c("POP_CGR80_19_calc", "POP_CGR80_19")]
 
 
+data_trump$POP_CGR80_19_calc <- (
+  data_trump$POP_19 / data_trump$POP_80
+)^(1 / (2019 - 1980)) - 1
+
+
 
 #####################
 # If you have 2019 value already logged and 1980 raw:
+#data_trump$EAR_AVE_JOB_CGR80_19_calc <- (
+#  data_trump$EAR_AVE_JOB_19_ln - data_trump$EAR_AVE_JOB_80_ln
+#) / (2019 - 1980)
+
 data_trump$EAR_AVE_JOB_CGR80_19_calc <- (
-  data_trump$EAR_AVE_JOB_19_ln - data_trump$EAR_AVE_JOB_80_ln
-) / (2019 - 1980)
+  data_trump$EAR_AVE_JOB_19 / data_trump$EAR_AVE_JOB_80
+)^(1 / (2019 - 1980)) - 1
 
 # Compare with original variable
 summary(data_trump$EAR_AVE_JOB_CGR80_19_calc)
@@ -504,13 +517,17 @@ data_trump[1:10, c("EAR_AVE_JOB_CGR80_19_calc", "EAR_AVE_JOB_CGR80_19")]
 
 
 
-
-
 ###################
 # Compute CGR for log-transformed WA_SA_MEA
+#data_trump$WA_SA_MEA_ln_D80_19_calc <- (
+#  data_trump$WA_SA_MEA_19_ln - data_trump$WA_SA_MEA_80_ln
+#) / (2019 - 1980)
+
+WA_SA_MEA_19 <- exp(data_trump$WA_SA_MEA_19_ln)
+WA_SA_MEA_80 <- exp(data_trump$WA_SA_MEA_80_ln)
 data_trump$WA_SA_MEA_ln_D80_19_calc <- (
-  data_trump$WA_SA_MEA_19_ln - data_trump$WA_SA_MEA_80_ln
-) / (2019 - 1980)
+  data_trump$WA_SA_MEA_19 / data_trump$WA_SA_MEA_80
+)^(1 / (2019 - 1980)) - 1
 
 # Compare with the original variable
 summary(data_trump$WA_SA_MEA_ln_D80_19_calc)
@@ -522,8 +539,13 @@ data_trump[1:10, c("WA_SA_MEA_ln_D80_19_calc", "WA_SA_MEA_CGR80_19")]
 
 #####################
 # Recreate the compound growth rate for EMP_AVE
+#data_trump$EMP_AVE_CGR80_19_calc <- (
+#  log(data_trump$EMP_AVE_19) - log(data_trump$EMP_AVE_80)) / (2019 - 1980)
+
 data_trump$EMP_AVE_CGR80_19_calc <- (
-  log(data_trump$EMP_AVE_19) - log(data_trump$EMP_AVE_80)) / (2019 - 1980)
+  data_trump$EMP_AVE_19 / data_trump$EMP_AVE_80
+)^(1 / (2019 - 1980)) - 1
+
 # Correlation check
 cor(data_trump$EMP_AVE_CGR80_19_calc, data_trump$EMP_AVE_CGR80_19, use = "complete.obs")
 max(abs(data_trump$EMP_AVE_CGR80_19_calc - data_trump$EMP_AVE_CGR80_19), na.rm = TRUE)
@@ -531,13 +553,6 @@ max(abs(data_trump$EMP_AVE_CGR80_19_calc - data_trump$EMP_AVE_CGR80_19), na.rm =
 data_trump[1:10, c("EMP_AVE_CGR80_19_calc", "EMP_AVE_CGR80_19")]
 
 
-
-# Calculate Compound Growth Rate for EMP_AVE
-data_trump$EMP_AVE_CGR80_19_calc <- ((data_trump$EMP_AVE_19 / data_trump$EMP_AVE_80)^(1/(2019-1980))) - 1
-
-# Compare with original variable
-summary(data_trump$EMP_AVE_CGR80_19_calc)
-cor(data_trump$EMP_AVE_CGR80_19_calc, data_trump$EMP_AVE_CGR80_19, use = "complete.obs")
 
 # Print first 10 rows for inspection
 head(data_trump[, c("EMP_AVE_80", "EMP_AVE_19", "EMP_AVE_CGR80_19", "EMP_AVE_CGR80_19_calc")], 10)
