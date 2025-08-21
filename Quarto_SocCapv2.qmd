@@ -35,6 +35,7 @@ library(sjPlot)
 library(ggsci)
 library(Hmisc)
 library(psych)
+library(scales)
 ```
 
 # Set themes
@@ -115,7 +116,13 @@ summary(counties$GEOID)
 
 counties <- merge(data_trump2, counties, by.x = "FIPS_ID", by.y = "GEOID", all.x = FALSE, all.y = TRUE)
 
-
+states <- st_read("/Users/franciscorowe/Library/CloudStorage/Dropbox/Francisco/Research/in_progress/us-social-capital/Paper_SocCap/Shapefile_SocCap/gadm41_USA_shp/gadm41_USA_1.shp") %>% 
+  filter(!NAME_1 %in% c("Alaska", "Hawaii"))  %>% 
+  st_simplify(., # simplify boundaries for efficiency
+              preserveTopology = T,
+              dTolerance = 1000) %>%  # 1km
+  sf::st_make_valid(.) %>% 
+  fortify(.)
 ```
 
 **Figure 1** US Presidential Elections 2016 and 2020 (county level)
@@ -201,31 +208,37 @@ Nonetheless, it's important to acknowledge that social capital is not a one-dime
 ```{r echo=FALSE}
 map_civorg <- ggplot(data = counties) +
   geom_sf(aes(fill = civic_organizations_county, geometry = geometry), color = "transparent", size = 0.5) +
-  scale_fill_viridis_c(name = "Public good Facebook pages per 1,000 users", 
+  scale_fill_viridis_c(name = "Public good Facebook pages per 1,000 users (log)", 
                        option = "C",
+                       trans = "log",
+                       labels = label_log(base = 10),
                        guide = guide_colorbar(title.position="top")) +
   labs(title = "Civic Organizations") +
   theme_map() +
   theme(title = element_text(size = 20, face = "bold", colour = "#000000"),
-        legend.title = element_text(size=16, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
-        legend.text=element_text(size=15),
+        legend.title = element_text(size=12, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
+        legend.text=element_text(size=12),
         legend.position = "bottom",
         legend.key.width = unit(2.5, "cm"),
-        legend.key.height = unit(0.4, "cm"))
+        legend.key.height = unit(0.4, "cm")) +
+   geom_sf(data = states, color = "white", fill = "grey70", alpha = 0.2, linewidth = 0.3)
 
 map_vol <- ggplot(data = counties) +
   geom_sf(aes(fill = volunteering_rate_county, geometry = geometry), color = "transparent", size = 0.5) +
-  scale_fill_viridis_c(name = "Percent of Facebook users in volunteering or activism", 
+  scale_fill_viridis_c(name = "Percent of Facebook users in volunteering or activism (log)", 
                        option = "C",
+                       trans = "log",
+                       labels = label_log(base = 10),
                        guide = guide_colorbar(title.position="top")) +
   labs(title = "Volunteering Rate") +
   theme_map() +
   theme(title = element_text(size = 20, face = "bold", colour = "#000000"),
-        legend.title = element_text(size=16, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
-        legend.text=element_text(size=15),
+        legend.title = element_text(size=12, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
+        legend.text=element_text(size=12),
         legend.position = "bottom", 
         legend.key.width = unit(2.5, "cm"),
-        legend.key.height = unit(0.4, "cm"))
+        legend.key.height = unit(0.4, "cm")) +
+   geom_sf(data = states, color = "white", fill = "grey70", alpha = 0.2, linewidth = 0.3)
 
 map_civorg / map_vol
 ```
@@ -243,29 +256,35 @@ map_sup <- ggplot(data = counties) +
   geom_sf(aes(fill = support_ratio_county, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "Share of within-county Facebook friendships", 
                        option = "C",
+                       trans = "log",
+                       labels = label_log(base = 10),
                        guide = guide_colorbar(title.position="top")) +
   labs(title = "Support Network") +
   theme_map() +
   theme(title = element_text(size = 20, face = "bold", colour = "#000000"),
-        legend.title = element_text(size=16, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
-        legend.text=element_text(size=15),
+        legend.title = element_text(size=12, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
+        legend.text=element_text(size=12),
         legend.position = "bottom", 
         legend.key.width = unit(2.5, "cm"),
-        legend.key.height = unit(0.4, "cm"))
+        legend.key.height = unit(0.4, "cm")) +
+   geom_sf(data = states, color = "white", fill = "grey70", alpha = 0.2, linewidth = 0.3)
 
 map_clu <-  ggplot(data = counties) +
   geom_sf(aes(fill = clustering_county, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "Average share of Facebook friendship density", 
                        option = "C",
+                       trans = "log",
+                       labels = label_log(base = 10),
                        guide = guide_colorbar(title.position="top")) +
   labs(title = "Friendship clustering") +
   theme_map() +
   theme(title = element_text(size = 20, face = "bold", colour = "#000000"),
-        legend.title = element_text(size=16, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
-        legend.text=element_text(size=15),
+        legend.title = element_text(size=12, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
+        legend.text=element_text(size=12),
         legend.position = "bottom", 
         legend.key.width = unit(2.5, "cm"),
-        legend.key.height = unit(0.4, "cm"))
+        legend.key.height = unit(0.4, "cm")) +
+   geom_sf(data = states, color = "white", fill = "grey70", alpha = 0.2, linewidth = 0.3)
 
 map_sup / map_clu
 ```
@@ -283,15 +302,18 @@ ggplot(data = counties) +
   geom_sf(aes(fill = ec_county, geometry = geometry), color = "transparent", size = 0.5) +
   scale_fill_viridis_c(name = "Share of high-SES and low-SES Facebook friendship", 
                        option = "C",
+                       trans = "log",
+                       labels = label_log(base = 10),
                        guide = guide_colorbar(title.position="top")) +
   labs(title = "Economic Connectedness") +
   theme_map() +
   theme(title = element_text(size = 20, face = "bold", colour = "#000000"),
-        legend.title = element_text(size=16, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
-        legend.text=element_text(size=15),
+        legend.title = element_text(size=12, face = "plain", hjust=0.5, lineheight=0.45,        color="black"),
+        legend.text=element_text(size=12),
         legend.position = "bottom", 
         legend.key.width = unit(2.5, "cm"),
-        legend.key.height = unit(0.4, "cm"))
+        legend.key.height = unit(0.4, "cm")) +
+   geom_sf(data = states, color = "white", fill = "grey70", alpha = 0.2, linewidth = 0.3)
 ```
 
 ```{r}
@@ -299,7 +321,6 @@ png(filename = "./output/economic-connectedness.png", units="in", width=8, heigh
   last_plot()
 dev.off()
 ```
-
 
 ### Replicating Classic Models with META Data
 
@@ -370,8 +391,8 @@ png(filename = "./output/correlagram.png", units="in", width=8, height=6, res=30
 dev.off()
 ```
 
-
 For R&R - Traditional correlation matriz
+
 ```{r}
 # Compute correlation and significance
 corr_test <- corr.test(data_trump3, use = "pairwise", method = "pearson", adjust = "none")
@@ -395,8 +416,6 @@ cormat_stars <- matrix(cormat_stars,
 
 cormat_stars
 ```
-
-
 
 **Table 1** Basic model for Trump Margin 2016, with META data
 
@@ -435,7 +454,6 @@ modelnew16_5 <- data_trump2 %>% rename(
 summary(modelnew16_5)
 ```
 
-
 ```{r}
 plot_models(modelnew16_1, modelnew16_2, modelnew16_3, modelnew16_4, modelnew16_5,
             title = "2016",
@@ -465,14 +483,11 @@ plot_models(modelnew16_1, modelnew16_2, modelnew16_3, modelnew16_4, modelnew16_5
 social_coh <- last_plot()
 ```
 
-
 ```{r}
 png(filename = "./output/model-coef_social-capital_2016.png", units="in", width=8, height=8, res=300, bg = "white")
   last_plot()
 dev.off()
 ```
-
-
 
 **Table 2** Basic model for Trump Margin 2020, with META data
 
@@ -540,6 +555,7 @@ plot_models(modelnew20_1, modelnew20_2, modelnew20_3, modelnew20_4, modelnew20_5
   )
 social_coh <- last_plot()
 ```
+
 ```{r}
 png(filename = "./output/model-coef_social-capital_2020.png", units="in", width=8, height=8, res=300, bg = "white")
   last_plot()
@@ -743,7 +759,6 @@ interact_plot(modelint16_5,
 
 ```
 
-
 **Table 4** Interactions between social capital and economic change, 2020 elections.
 
 ```{r}
@@ -903,6 +918,7 @@ interact_plot(modelint20_5,
 ```
 
 R&R
+
 ```{r}
 describe(data_trump$INC_PC_16)
 describe(data_trump$GINI_16)
@@ -985,4 +1001,3 @@ modelrev16_5 <- data_trump2 %>% rename(
   lm(SHARE_T ~ INC_PC_16 + GINI_16 + EMP_AVE_CGR80_19 + social_community + POP_DEN_16 + UNE_16 + EDU1_16 + R_BLACK_16 + SEX_RATIO + AGE_DEP_YOUNG + MARRIED + factor(S_ID), data = .)
 summary(modelrev16_5)
 ```
-
